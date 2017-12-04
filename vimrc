@@ -21,6 +21,7 @@ set wildignore=*.bcf,*.nav,*.run.xml,*.snm,*.latexmain,*.aux,*.bbl,*.blg,*.log,*
 " }}}
 " Map {{{
 "
+inoremap <c-c>          <Esc>
 nnoremap <c-g>          :nohlsearch<CR><C-G>
 let      mapleader      =  "\<Space>"
 let      maplocalleader =  "\\"
@@ -28,8 +29,6 @@ map      H              ^
 map      L              $
 map      <c-j>          <Plug>(edgemotion-j)
 map      <c-k>          <Plug>(edgemotion-k)
-nnoremap <c-h>          :SidewaysLeft<cr>
-nnoremap <c-l>          :SidewaysRight<cr>
 xmap     <              <gv
 xmap     >              >gv
 nnoremap <leader>f      :find<Space>
@@ -40,11 +39,12 @@ nmap     ga             <Plug>(EasyAlign)
 nnoremap <F9>           :Dispatch<CR>
 nnoremap s              :w<CR>
 " Text objects
+nnoremap <a             :SidewaysLeft<cr>
+nnoremap >a             :SidewaysRight<cr>
 omap     aa             <Plug>SidewaysArgumentTextobjA
 xmap     aa             <Plug>SidewaysArgumentTextobjA
 omap     ia             <Plug>SidewaysArgumentTextobjI
 xmap     ia             <Plug>SidewaysArgumentTextobjI
-inoremap <C-C>          <Esc>
 
 " }}}
 " {{{ Functions

@@ -47,6 +47,7 @@ Plug 'haya14busa/vim-auto-programming'
 " FileType-specific
 Plug 'lervag/vimtex'
 Plug 'leafgarland/typescript-vim'
+Plug 'suan/vim-instant-markdown'
 
 
 " Colors
@@ -84,8 +85,8 @@ let g:vimtex_compiler_latexmk = {
     \}
 
 let g:airline#extensions#ale#enabled = 1
-" let g:ale_linters = { 'typescript': ['tsserver'] }
-"
+let g:instant_markdown_autostart = 0
+
 function! s:latexSurround()
    let b:surround_{char2nr("e")}
      \ = "\\begin{\1environment: \1}\n\t\r\n\\end{\1\1}"
@@ -99,15 +100,15 @@ augroup END
 
 function! s:power_safe_mode(on)
   if a:on
-    echom "Turning Power Safe mode ON"
+    echom "Turning Power Safe mode: ON"
     let g:ale_lint_on_text_changed = "never"
     let g:instant_markdown_slow = 1
   else
-    echom "Turning Power Safe mode OFF"
+    echom "Turning Power Safe mode: OFF"
     let g:ale_lint_on_text_changed = "always"
     let g:instant_markdown_slow = 0
   endif
 endfunction
-
 command! -bang PowerSafe call <SID>power_safe_mode(<bang>1)
+silent PowerSafe
 " }}}
