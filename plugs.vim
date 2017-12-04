@@ -96,4 +96,18 @@ augroup plugs_ex
   au FileType tex call s:latexSurround()
   au FileType typescript setlocal fdm=syntax
 augroup END
+
+function! s:power_safe_mode(on)
+  if a:on
+    echom "Turning Power Safe mode ON"
+    let g:ale_lint_on_text_changed = "never"
+    let g:instant_markdown_slow = 1
+  else
+    echom "Turning Power Safe mode OFF"
+    let g:ale_lint_on_text_changed = "always"
+    let g:instant_markdown_slow = 0
+  endif
+endfunction
+
+command! -bang PowerSafe call <SID>power_safe_mode(<bang>1)
 " }}}
