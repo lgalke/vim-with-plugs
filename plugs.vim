@@ -87,6 +87,9 @@ let g:vimtex_compiler_latexmk = {
 let g:airline#extensions#ale#enabled = 1
 let g:instant_markdown_autostart = 0
 
+let g:ale_echo_msg_format = '[%linter%/%severity%] %code: %%s'
+let g:ale_linters = { 'python' : ['flake8','pylint', 'mypy']}
+
 function! s:latexSurround()
    let b:surround_{char2nr("e")}
      \ = "\\begin{\1environment: \1}\n\t\r\n\\end{\1\1}"
@@ -110,5 +113,5 @@ function! s:power_safe_mode(on)
   endif
 endfunction
 command! -bang PowerSafe call <SID>power_safe_mode(<bang>1)
-silent PowerSafe
+" silent PowerSafe
 " }}}

@@ -21,6 +21,7 @@ set wildignore=*.bcf,*.nav,*.run.xml,*.snm,*.latexmain,*.aux,*.bbl,*.blg,*.log,*
 " }}}
 " Map {{{
 "
+nmap     Q              gq
 inoremap <c-c>          <Esc>
 nnoremap <c-g>          :nohlsearch<CR><C-G>
 let      mapleader      =  "\<Space>"
