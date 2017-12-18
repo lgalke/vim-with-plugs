@@ -54,6 +54,9 @@ Plug 'suan/vim-instant-markdown'
 Plug 'ap/vim-css-color'
 Plug 'AlessandroYorba/Alduin'
 
+" Testing
+Plug 'kannokanno/previm'
+
 " Misc
 Plug 'tweekmonster/startuptime.vim'
 
@@ -89,6 +92,7 @@ let g:instant_markdown_autostart = 0
 
 let g:ale_echo_msg_format = '[%linter%/%severity%] %code: %%s'
 let g:ale_linters = { 'python' : ['flake8','pylint', 'mypy']}
+let g:ale_fixers = { 'markdown' : [ 'remove_trailing_lines', 'trim_whitespace' ] }
 
 function! s:latexSurround()
    let b:surround_{char2nr("e")}
@@ -112,6 +116,6 @@ function! s:power_safe_mode(on)
     let g:instant_markdown_slow = 0
   endif
 endfunction
-command! -bang PowerSafe call <SID>power_safe_mode(<bang>1)
+command! -bang PowerSafe call <SID>power_safe_mode(<bang>1) | doautoall BufReadPost,BufEnter
 " silent PowerSafe
 " }}}
