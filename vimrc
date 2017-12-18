@@ -13,14 +13,15 @@ set virtualedit+=block
 set foldopen+=jump
 set conceallevel=2
 set ignorecase smartcase
+set nowrap sidescroll=5
 set undofile
-set undodir=$TEMP,.
+set undodir=$TEMP,$TMP,.
+set listchars=eol:$,tab:>-,nbsp:~,trail:-,extends:>,precedes:<
 " latex rubbish
 set wildignore=*.bcf,*.nav,*.run.xml,*.snm,*.latexmain,*.aux,*.bbl,*.blg,*.log,*.fdb_latexmk,*.fls,*.out,*.synctex.gz,*.toc
-
 " }}}
+
 " Map {{{
-"
 inoremap <c-c>          <Esc>
 nnoremap <c-g>          :nohlsearch<CR><C-G>
 let      mapleader      =  "\<Space>"
@@ -45,6 +46,12 @@ omap     aa             <Plug>SidewaysArgumentTextobjA
 xmap     aa             <Plug>SidewaysArgumentTextobjA
 omap     ia             <Plug>SidewaysArgumentTextobjI
 xmap     ia             <Plug>SidewaysArgumentTextobjI
+nmap     <leader>af     <Plug>(ale_fix)
+nmap     <leader>an     <Plug>(ale_next_wrap)
+nmap     <leader>ap     <Plug>(ale_previous_wrap)
+nmap     <leader>gs     :Gstatus<CR>
+nmap     <leader>gp     :Gpush<CR>
+
 
 " }}}
 " {{{ Functions
