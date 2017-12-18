@@ -89,6 +89,8 @@ let g:vimtex_compiler_latexmk = {
 
 let g:airline#extensions#ale#enabled = 1
 
+let g:ale_echo_msg_format = '[%linter%/%severity%] %code: %%s'
+let g:ale_linters = { 'python' : ['flake8','pylint', 'mypy']}
 let g:ale_fixers = { 'markdown' : [ 'remove_trailing_lines', 'trim_whitespace' ] }
 let g:previm_open_cmd = 'xdg-open'
 
@@ -114,5 +116,5 @@ function! s:power_safe_mode(on)
   endif
 endfunction
 command! -bang PowerSafe call <SID>power_safe_mode(<bang>1) | doautoall BufReadPost,BufEnter
-silent PowerSafe
+" silent PowerSafe
 " }}}
