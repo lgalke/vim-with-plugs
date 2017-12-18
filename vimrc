@@ -74,4 +74,8 @@ let g:alduin_Contract_Vampirism = 1
 let g:alduin_Shout_Fire_Breath = 1
 let g:alduin_Shout_Aura_Whisper = 0
 silent! colo alduin
+
+if filereadable(expand("~/.vim/vimrc.local"))
+  source ~/.vim/vimrc.local
+endif
 " }}}
