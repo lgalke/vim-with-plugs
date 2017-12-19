@@ -13,38 +13,45 @@ set virtualedit+=block
 set foldopen+=jump
 set conceallevel=2
 set ignorecase smartcase
+set nowrap sidescroll=5
 set undofile
-set undodir=$TEMP,.
+set undodir=$TEMP,$TMP,.
+set listchars=eol:$,tab:>-,nbsp:~,trail:-,extends:>,precedes:<
 " latex rubbish
 set wildignore=*.bcf,*.nav,*.run.xml,*.snm,*.latexmain,*.aux,*.bbl,*.blg,*.log,*.fdb_latexmk,*.fls,*.out,*.synctex.gz,*.toc
-
 " }}}
+
 " Map {{{
-"
-let      g:mapleader      =  "\<Space>"
-let      g:maplocalleader =  "\\"
-inoremap <c-c>            <Esc>
-nnoremap <c-g>            :nohlsearch<CR><C-G>
-map      H                ^
-map      L                $
-map      <c-j>            <Plug>(edgemotion-j)
-map      <c-k>            <Plug>(edgemotion-k)
-xmap     <                <gv
-xmap     >                >gv
-nnoremap <leader>f        :find<Space>
-nnoremap <leader>v        :e $MYVIMRC<CR>
-nnoremap <leader>b        :ls<CR>:b<Space>
-xmap     ga               <Plug>(EasyAlign)
-nmap     ga               <Plug>(EasyAlign)
-nnoremap <F9>             :Dispatch<CR>
-nnoremap s                :w<CR>
+nmap     Q              gq
+inoremap <c-c>          <Esc>
+nnoremap <c-g>          :nohlsearch<CR><C-G>
+let      mapleader      =  "\<Space>"
+let      maplocalleader =  "\\"
+map      H              ^
+map      L              $
+map      <c-j>          <Plug>(edgemotion-j)
+map      <c-k>          <Plug>(edgemotion-k)
+xmap     <              <gv
+xmap     >              >gv
+nnoremap <leader>f      :find<Space>
+nnoremap <leader>v      :e $MYVIMRC<CR>
+nnoremap <leader>b      :ls<CR>:b<Space>
+xmap     ga             <Plug>(EasyAlign)
+nmap     ga             <Plug>(EasyAlign)
+nnoremap <F9>           :Dispatch<CR>
+nnoremap s              :w<CR>
 " Text objects
-nnoremap <a               :SidewaysLeft<cr>
-nnoremap >a               :SidewaysRight<cr>
-omap     aa               <Plug>SidewaysArgumentTextobjA
-xmap     aa               <Plug>SidewaysArgumentTextobjA
-omap     ia               <Plug>SidewaysArgumentTextobjI
-xmap     ia               <Plug>SidewaysArgumentTextobjI
+nnoremap <a             :SidewaysLeft<cr>
+nnoremap >a             :SidewaysRight<cr>
+omap     aa             <Plug>SidewaysArgumentTextobjA
+xmap     aa             <Plug>SidewaysArgumentTextobjA
+omap     ia             <Plug>SidewaysArgumentTextobjI
+xmap     ia             <Plug>SidewaysArgumentTextobjI
+nmap     <leader>af     <Plug>(ale_fix)
+nmap     <leader>an     <Plug>(ale_next_wrap)
+nmap     <leader>ap     <Plug>(ale_previous_wrap)
+nmap     <leader>gs     :Gstatus<CR>
+nmap     <leader>gp     :Gpush<CR>
 
 " }}}
 " {{{ Functions
@@ -67,4 +74,8 @@ let g:alduin_Contract_Vampirism = 1
 let g:alduin_Shout_Fire_Breath = 1
 let g:alduin_Shout_Aura_Whisper = 1
 silent! colo alduin
+
+if filereadable(expand("~/.vim/vimrc.local"))
+  source ~/.vim/vimrc.local
+endif
 " }}}
