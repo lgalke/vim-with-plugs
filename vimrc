@@ -1,5 +1,13 @@
 set nocompatible
-source ~/.vim/plugs.vim
+try
+  " unix-like
+  source ~/.vim/plugs.vim
+catch
+  " windows
+  source ~/vimfiles/plugs.vim
+endtry
+
+
 
 runtime ftplugin/man.vim
 
