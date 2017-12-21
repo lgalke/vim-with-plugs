@@ -74,7 +74,9 @@ augroup END
 " }}}
 
 " Closing words {{{
-set termguicolors
+if has("termguicolors")
+  set termguicolors
+endif
 filetype plugin indent on
 syntax enable
 " Cycle through colors
