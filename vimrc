@@ -1,5 +1,13 @@
 set nocompatible
-source ~/.vim/plugs.vim
+try
+  " unix-like
+  source ~/.vim/plugs.vim
+catch
+  " windows
+  source ~/vimfiles/plugs.vim
+endtry
+
+
 
 runtime ftplugin/man.vim
 
@@ -53,7 +61,6 @@ nmap     <leader>ap     <Plug>(ale_previous_wrap)
 nmap     <leader>gs     :Gstatus<CR>
 nmap     <leader>gp     :Gpush<CR>
 
-
 " }}}
 " {{{ Functions
 " }}}
@@ -75,6 +82,10 @@ syntax enable
 " Cycle through colors
 let g:alduin_Contract_Vampirism = 1
 let g:alduin_Shout_Fire_Breath = 1
-let g:alduin_Shout_Aura_Whisper = 0
+let g:alduin_Shout_Aura_Whisper = 1
 silent! colo alduin
+
+if filereadable(expand("~/.vim/vimrc.local"))
+  source ~/.vim/vimrc.local
+endif
 " }}}
