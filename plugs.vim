@@ -26,10 +26,13 @@ Plug 'tpope/vim-jdaddy'
 Plug 'AndrewRadev/sideways.vim'
 Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'AndrewRadev/switch.vim'
 
 " Helpers
 Plug 'Olical/vim-enmasse'
 
+" Python
+Plug 'Vimjas/vim-python-pep8-indent'
 
 " Statusline
 Plug 'vim-airline/vim-airline'
@@ -91,7 +94,7 @@ let g:airline#extensions#ale#enabled = 1
 let g:instant_markdown_autostart = 0
 
 let g:ale_echo_msg_format = '[%linter%/%severity%] %code: %%s'
-let g:ale_linters = { 'python' : ['flake8','pylint', 'mypy']}
+let g:ale_linters = { 'python' : ['flake8','pylint']}
 let g:ale_fixers = { 'markdown' : [ 'remove_trailing_lines', 'trim_whitespace' ] }
 
 function! s:latexSurround()
