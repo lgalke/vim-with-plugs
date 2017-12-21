@@ -70,6 +70,7 @@ augroup vimrc_ex
   au!
   au FileType vim setlocal fdm=marker
   au FileType qf,help nnoremap <buffer> q :q!<CR>
+  au FileType tex,markdown,txt,rst call litecorrect#init()
 augroup END
 " }}}
 

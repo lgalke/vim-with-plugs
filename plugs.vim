@@ -31,11 +31,18 @@ Plug 'AndrewRadev/switch.vim'
 " Helpers
 Plug 'Olical/vim-enmasse'
 
-" Python
-Plug 'Vimjas/vim-python-pep8-indent'
 
 " Statusline
 Plug 'vim-airline/vim-airline'
+
+" Python
+Plug 'Vimjas/vim-python-pep8-indent'
+
+" Prose
+Plug 'reedes/vim-wordy'
+Plug 'reedes/vim-litecorrect'
+
+
 
 " Linter
 Plug 'w0rp/ale' 
