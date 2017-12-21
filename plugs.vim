@@ -53,6 +53,7 @@ Plug 'suan/vim-instant-markdown'
 " Colors
 Plug 'ap/vim-css-color'
 Plug 'AlessandroYorba/Alduin'
+Plug 'thiagoalessio/rainbow_levels.vim'
 
 " Testing
 Plug 'kannokanno/previm'
