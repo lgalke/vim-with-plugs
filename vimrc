@@ -84,6 +84,6 @@ let g:alduin_Shout_Aura_Whisper = 1
 silent! colo alduin
 
 if filereadable(expand("~/.vim/vimrc.local"))
-  source ~/.vim/vimrc.local
+  source ~/vimrc.local
 endif
 " }}}
