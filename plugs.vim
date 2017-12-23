@@ -57,7 +57,7 @@ Plug 'haya14busa/vim-auto-programming'
 " FileType-specific
 Plug 'lervag/vimtex'
 Plug 'leafgarland/typescript-vim'
-Plug 'suan/vim-instant-markdown'
+" Plug 'suan/vim-instant-markdown'
 
 
 " Colors
