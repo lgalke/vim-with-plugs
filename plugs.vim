@@ -36,6 +36,8 @@ Plug 'junegunn/fzf.vim'
 " Intra-File Navigation
 Plug 'justinmk/vim-sneak'
 
+let g:sneak#label = 1
+
 " Helpers
 Plug 'Olical/vim-enmasse'
 
