@@ -1,0 +1,1 @@
+inoremap <buffer> ** \textbf{}<Left>

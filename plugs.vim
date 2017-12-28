@@ -21,12 +21,20 @@ Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-jdaddy'
+Plug 'tpope/vim-eunuch'
 
 " AndrewRadev
 Plug 'AndrewRadev/sideways.vim'
 Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/switch.vim'
+
+" Inter-File Navigation
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+" Intra-File Navigation
+Plug 'justinmk/vim-sneak'
 
 " Helpers
 Plug 'Olical/vim-enmasse'
@@ -42,6 +50,10 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'reedes/vim-wordy'
 Plug 'reedes/vim-litecorrect'
 
+
+" Pandoc
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 
 " Linter
@@ -63,7 +75,6 @@ Plug 'leafgarland/typescript-vim'
 " Colors
 Plug 'ap/vim-css-color'
 Plug 'AlessandroYorba/Alduin'
-Plug 'thiagoalessio/rainbow_levels.vim'
 
 " Testing
 Plug 'kannokanno/previm'
@@ -78,10 +89,11 @@ call plug#end()
 
 let g:vimtex_fold_enabled = 1
 let g:vimtex_fold_manual = 1
-let g:vimtex_view_general_viewer = 'SumatraPDF'
-" add cygwin path prefix /cygwin64/
-let g:vimtex_view_general_options
-    \ = '-reuse-instance -forward-search @tex @line /cygwin64/@pdf'
+" Should move to local
+" let g:vimtex_view_general_viewer = 'SumatraPDF'
+" " add cygwin path prefix /cygwin64/
+" let g:vimtex_view_general_options
+"     \ = '-reuse-instance -forward-search @tex @line /cygwin64/@pdf'
 let g:vimtex_compiler_latexmk = {
   \ 'backend' : 'jobs',
     \ 'background' : 1,
@@ -104,6 +116,10 @@ let g:ale_echo_msg_format = '[%linter%/%severity%] %code: %%s'
 let g:ale_linters = { 'python' : ['flake8','pylint']}
 let g:ale_fixers = { 'markdown' : [ 'remove_trailing_lines', 'trim_whitespace' ] }
 let g:previm_open_cmd = 'xdg-open'
+
+
+let g:pandoc#biblio#use_bibtool = 1
+let g:pandoc#completion#bib#mode = "citeproc"
 
 
 function! s:latexSurround()

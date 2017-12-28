@@ -1,13 +1,12 @@
 set nocompatible
 try
+  " Use runtimepath via `runtime` instead?
   " unix-like
   source ~/.vim/plugs.vim
 catch
   " windows
   source ~/vimfiles/plugs.vim
 endtry
-
-
 
 runtime ftplugin/man.vim
 
@@ -27,6 +26,8 @@ set undodir=$TEMP,$TMP,.
 set listchars=eol:$,tab:>-,nbsp:~,trail:-,extends:>,precedes:<
 " latex rubbish
 set wildignore=*.bcf,*.nav,*.run.xml,*.snm,*.latexmain,*.aux,*.bbl,*.blg,*.log,*.fdb_latexmk,*.fls,*.out,*.synctex.gz,*.toc
+
+let g:markdown_fenced_languages = ["sh", "python"]
 " }}}
 
 " Map {{{
@@ -47,7 +48,6 @@ nnoremap <leader>b      :ls<CR>:b<Space>
 xmap     ga             <Plug>(EasyAlign)
 nmap     ga             <Plug>(EasyAlign)
 nnoremap <F9>           :Dispatch<CR>
-nnoremap s              :w<CR>
 " Text objects
 nnoremap <a             :SidewaysLeft<cr>
 nnoremap >a             :SidewaysRight<cr>
