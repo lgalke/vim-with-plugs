@@ -1,30 +1,44 @@
 call plug#begin('~/.vim/plugged')
 
 " tpope
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-vividchalk'
-Plug 'tpope/vim-jdaddy'
-Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-scriptease'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
-Plug 'tpope/vim-sleuth'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-vinegar'
-Plug 'tpope/vim-rsi'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-speeddating'
-Plug 'tpope/vim-ragtag'
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-jdaddy'
-Plug 'tpope/vim-eunuch'
+Plug     'tpope/vim-sensible'
+Plug     'tpope/vim-surround'
+Plug     'tpope/vim-repeat'
+Plug     'tpope/vim-commentary'
+Plug     'tpope/vim-vividchalk'
+Plug     'tpope/vim-jdaddy'
+Plug     'tpope/vim-scriptease'
+Plug     'tpope/vim-projectionist'
+
+Plug     'tpope/vim-dispatch'
+nnoremap <F9> :Dispatch<CR>
+
+
+Plug     'tpope/vim-fugitive'
+nmap     <leader>gs     :Gstatus<CR>
+nmap     <leader>gp     :Gpush<CR>
+
+Plug     'tpope/vim-rhubarb'
+Plug     'tpope/vim-sleuth'
+Plug     'tpope/vim-unimpaired'
+Plug     'tpope/vim-vinegar'
+Plug     'tpope/vim-rsi'
+Plug     'tpope/vim-endwise'
+Plug     'tpope/vim-speeddating'
+Plug     'tpope/vim-ragtag'
+Plug     'tpope/vim-abolish'
+Plug     'tpope/vim-jdaddy'
+Plug     'tpope/vim-eunuch'
 
 " AndrewRadev
-Plug 'AndrewRadev/sideways.vim'
+Plug     'AndrewRadev/sideways.vim'
+nnoremap <a :SidewaysLeft<cr>
+nnoremap >a :SidewaysRight<cr>
+omap     aa <Plug>SidewaysArgumentTextobjA
+xmap     aa <Plug>SidewaysArgumentTextobjA
+omap     ia <Plug>SidewaysArgumentTextobjI
+xmap     ia <Plug>SidewaysArgumentTextobjI
+
 Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/switch.vim'
@@ -32,6 +46,13 @@ Plug 'AndrewRadev/switch.vim'
 " Inter-File Navigation
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+" Use FZF as CtrlP drop-in
+nnoremap <c-p> :FZF<CR>
+
+" Statusline
+Plug 'vim-airline/vim-airline'
+let g:airline#extensions#ale#enabled = 1
 
 " Intra-File Navigation
 Plug 'justinmk/vim-sneak'
@@ -42,53 +63,49 @@ let g:sneak#label = 1
 Plug 'Olical/vim-enmasse'
 
 
-" Statusline
-Plug 'vim-airline/vim-airline'
-
 " Python
 Plug 'Vimjas/vim-python-pep8-indent'
 
-" Prose
+" Writing Prose
 Plug 'reedes/vim-wordy'
 Plug 'reedes/vim-litecorrect'
+Plug 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim'
+
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 
 " Pandoc
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
+let g:pandoc#biblio#use_bibtool = 1
+let g:pandoc#completion#bib#mode = "citeproc"
 
 
 " Linter
-Plug 'w0rp/ale' 
+Plug 'w0rp/ale'
+nmap <leader>af <Plug>(ale_fix)
+nmap <leader>an <Plug>(ale_next_wrap)
+nmap <leader>ap <Plug>(ale_previous_wrap)
+let g:ale_echo_msg_format = '[%linter%/%severity%] %code: %%s'
+let g:ale_linters = { 'python' : ['flake8','pylint']}
+let g:ale_fixers = { 'markdown' : [ 'remove_trailing_lines', 'trim_whitespace' ] }
 
 " junegunn
 Plug 'junegunn/vim-easy-align'
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 " haya14busa
 Plug 'haya14busa/vim-edgemotion'
+map  <c-j> <Plug>(edgemotion-j)
+map  <c-k> <Plug>(edgemotion-k)
 Plug 'haya14busa/vim-auto-programming'
 
 " FileType-specific
 Plug 'lervag/vimtex'
-Plug 'leafgarland/typescript-vim'
-" Plug 'suan/vim-instant-markdown'
-
-
-" Colors
-Plug 'ap/vim-css-color'
-Plug 'AlessandroYorba/Alduin'
-
-" Testing
-Plug 'kannokanno/previm'
-
-" Misc
-Plug 'tweekmonster/startuptime.vim'
-
-
-call plug#end()
-
-" Plugin Configuration {{{
-
+" vimtex {{{
 let g:vimtex_fold_enabled = 1
 let g:vimtex_fold_manual = 1
 " Should move to local
@@ -111,18 +128,27 @@ let g:vimtex_compiler_latexmk = {
     \   '-interaction=nonstopmode',
     \ ],
     \}
+" }}}
 
-let g:airline#extensions#ale#enabled = 1
+Plug 'leafgarland/typescript-vim'
+" Plug 'suan/vim-instant-markdown'
 
-let g:ale_echo_msg_format = '[%linter%/%severity%] %code: %%s'
-let g:ale_linters = { 'python' : ['flake8','pylint']}
-let g:ale_fixers = { 'markdown' : [ 'remove_trailing_lines', 'trim_whitespace' ] }
+
+" Colors
+Plug 'ap/vim-css-color'
+Plug 'AlessandroYorba/Alduin'
+
+" Testing
+Plug 'kannokanno/previm'
 let g:previm_open_cmd = 'xdg-open'
 
+" Misc
+Plug 'tweekmonster/startuptime.vim'
 
-let g:pandoc#biblio#use_bibtool = 1
-let g:pandoc#completion#bib#mode = "citeproc"
 
+call plug#end()
+
+" Plugin Configuration {{{
 
 function! s:latexSurround()
    let b:surround_{char2nr("e")}
