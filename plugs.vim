@@ -67,6 +67,7 @@ Plug 'thiagoalessio/rainbow_levels.vim'
 
 " Testing
 Plug 'kannokanno/previm'
+Plug 'wincent/ferret'
 
 " Misc
 Plug 'tweekmonster/startuptime.vim'
