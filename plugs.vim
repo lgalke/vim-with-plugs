@@ -79,9 +79,9 @@ autocmd! User GoyoLeave Limelight!
 " Pandoc
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
+let g:pandoc#filetypes#pandoc_markdown = 0
 let g:pandoc#biblio#use_bibtool = 1
 let g:pandoc#completion#bib#mode = "citeproc"
-
 
 " Linter
 Plug 'w0rp/ale'
@@ -108,6 +108,7 @@ Plug 'lervag/vimtex'
 " vimtex {{{
 let g:vimtex_fold_enabled = 1
 let g:vimtex_fold_manual = 1
+let g:vimtex_format_enabled = 1
 " Should move to local
 " let g:vimtex_view_general_viewer = 'SumatraPDF'
 " " add cygwin path prefix /cygwin64/
