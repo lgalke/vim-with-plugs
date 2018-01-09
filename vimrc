@@ -1,4 +1,6 @@
 set nocompatible
+let      mapleader      =  "\<Space>"
+let      maplocalleader =  "\\"
 runtime plugs.vim
 runtime ftplugin/man.vim
 
@@ -27,8 +29,6 @@ let g:markdown_fenced_languages = ["sh", "python"]
 nmap     Q              gq
 inoremap <c-c>          <Esc>
 nnoremap <c-g>          :nohlsearch<CR><C-G>
-let      mapleader      =  "\<Space>"
-let      maplocalleader =  "\\"
 map      H              ^
 map      L              $
 xmap     <              <gv
@@ -47,7 +47,12 @@ augroup vimrc_ex
   au!
   au FileType vim setlocal fdm=marker
   au FileType qf,help nnoremap <buffer> q :q!<CR>
-  au FileType tex,markdown,txt,rst call litecorrect#init()
+  au FileType tex,markdown,txt,rst
+        \ setlocal spell
+        \ | setlocal nonumber
+        \ | setlocal norelativenumber
+        \ | setlocal isk+=-
+        \ | call litecorrect#init()
 augroup END
 " }}}
 
@@ -63,7 +68,7 @@ let g:alduin_Shout_Fire_Breath = 1
 let g:alduin_Shout_Aura_Whisper = 1
 silent! colo alduin
 
-if filereadable(expand("~/.vim/vimrc.local"))
+if filereadable(expand("~/vimrc.local"))
   source ~/vimrc.local
 endif
 " }}}
