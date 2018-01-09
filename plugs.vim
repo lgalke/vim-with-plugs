@@ -11,6 +11,10 @@ Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-scriptease'
 Plug 'tpope/vim-fugitive'
+nnoremap <leader>gs :GStatus<CR>
+nnoremap <leader>gf :Gfetch<CR>
+nnoremap <leader>gm :Gmerge<CR>
+nnoremap <leader>gp :Gpush<CR>
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-unimpaired'
