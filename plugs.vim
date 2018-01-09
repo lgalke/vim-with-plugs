@@ -9,9 +9,12 @@ Plug 'tpope/vim-vividchalk'
 Plug 'tpope/vim-jdaddy'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-dispatch'
+nnoremap <leader>m :Make<CR>
+nnoremap <leader>d :Dispatch<CR>
 Plug 'tpope/vim-scriptease'
 Plug 'tpope/vim-fugitive'
-nnoremap <leader>gs :GStatus<CR>
+nnoremap <leader>gb :Gbrowse<CR>
+nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gf :Gfetch<CR>
 nnoremap <leader>gm :Gmerge<CR>
 nnoremap <leader>gp :Gpush<CR>
@@ -71,7 +74,6 @@ Plug 'thiagoalessio/rainbow_levels.vim'
 
 " Testing
 Plug 'kannokanno/previm'
-Plug 'wincent/ferret'
 
 " Misc
 Plug 'tweekmonster/startuptime.vim'
