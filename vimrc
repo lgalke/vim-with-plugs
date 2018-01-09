@@ -51,7 +51,8 @@ augroup vimrc_ex
         \ setlocal spell
         \ | setlocal nonumber
         \ | setlocal norelativenumber
-        \ |call litecorrect#init()
+        \ | setlocal isk+=-
+        \ | call litecorrect#init()
 augroup END
 " }}}
 
