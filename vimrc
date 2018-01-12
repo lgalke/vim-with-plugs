@@ -17,6 +17,8 @@ set number relativenumber
 set ignorecase smartcase
 set nowrap sidescroll=5
 set undofile
+" Never use windows line endigs
+set ff=unix
 set undodir=$TEMP,$TMP,.
 set listchars=eol:$,tab:>-,nbsp:~,trail:-,extends:>,precedes:<
 " latex rubbish

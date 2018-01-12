@@ -103,6 +103,7 @@ Plug 'suan/vim-instant-markdown'
 " Colors
 Plug 'ap/vim-css-color'
 Plug 'AlessandroYorba/Alduin'
+Plug 'morhetz/gruvbox'
 
 " Testing
 Plug 'kannokanno/previm'
