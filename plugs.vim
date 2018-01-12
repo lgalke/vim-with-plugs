@@ -41,7 +41,6 @@ Plug 'Olical/vim-enmasse'
 
 " Statusline
 Plug 'vim-airline/vim-airline'
-let g:airline#extensions#ale#enabled = 1
 
 " Python
 Plug 'Vimjas/vim-python-pep8-indent'
@@ -63,6 +62,8 @@ Plug 'w0rp/ale'
 let g:ale_echo_msg_format = '[%linter%/%severity%] %code: %%s'
 let g:ale_linters = { 'python' : ['flake8','pylint']}
 let g:ale_fixers = { 'markdown' : [ 'remove_trailing_lines', 'trim_whitespace' ] }
+" Ale in Airline
+let g:airline#extensions#ale#enabled = 1
 
 " junegunn
 Plug 'junegunn/vim-easy-align'
@@ -70,6 +71,7 @@ Plug 'junegunn/vim-easy-align'
 " haya14busa
 Plug 'haya14busa/vim-edgemotion'
 Plug 'haya14busa/vim-auto-programming'
+set completefunc=autoprogramming#complete
 
 " FileType-specific
 Plug 'lervag/vimtex'

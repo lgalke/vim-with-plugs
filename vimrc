@@ -7,7 +7,6 @@ runtime ftplugin/man.vim
 " {{{ Basic Options
 
 set autowriteall
-set completefunc=autoprogramming#complete
 " sub-directories for find
 set path+=**
 set virtualedit+=block
