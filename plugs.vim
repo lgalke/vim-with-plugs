@@ -71,6 +71,8 @@ Plug 'suan/vim-instant-markdown'
 Plug 'ap/vim-css-color'
 Plug 'AlessandroYorba/Alduin'
 Plug 'thiagoalessio/rainbow_levels.vim'
+Plug 'morhetz/gruvbox'
+
 
 " Testing
 Plug 'kannokanno/previm'
