@@ -41,6 +41,7 @@ Plug 'Olical/vim-enmasse'
 
 " Statusline
 Plug 'vim-airline/vim-airline'
+let g:airline#extensions#ale#enabled = 1
 
 " Python
 Plug 'Vimjas/vim-python-pep8-indent'
@@ -50,9 +51,18 @@ Plug 'reedes/vim-wordy'
 Plug 'reedes/vim-litecorrect'
 
 
+" Pandoc
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+let g:pandoc#filetypes#pandoc_markdown = 0
+let g:pandoc#biblio#use_bibtool = 1
+let g:pandoc#completion#bib#mode = "citeproc"
 
 " Linter
 Plug 'w0rp/ale' 
+let g:ale_echo_msg_format = '[%linter%/%severity%] %code: %%s'
+let g:ale_linters = { 'python' : ['flake8','pylint']}
+let g:ale_fixers = { 'markdown' : [ 'remove_trailing_lines', 'trim_whitespace' ] }
 
 " junegunn
 Plug 'junegunn/vim-easy-align'
@@ -63,34 +73,14 @@ Plug 'haya14busa/vim-auto-programming'
 
 " FileType-specific
 Plug 'lervag/vimtex'
-Plug 'leafgarland/typescript-vim'
-Plug 'suan/vim-instant-markdown'
-
-
-" Colors
-Plug 'ap/vim-css-color'
-Plug 'AlessandroYorba/Alduin'
-Plug 'thiagoalessio/rainbow_levels.vim'
-Plug 'morhetz/gruvbox'
-
-
-" Testing
-Plug 'kannokanno/previm'
-
-" Misc
-Plug 'tweekmonster/startuptime.vim'
-
-
-call plug#end()
-
-" Plugin Configuration {{{
-
 let g:vimtex_fold_enabled = 1
 let g:vimtex_fold_manual = 1
-let g:vimtex_view_general_viewer = 'SumatraPDF'
-" add cygwin path prefix /cygwin64/
-let g:vimtex_view_general_options
-    \ = '-reuse-instance -forward-search @tex @line /cygwin64/@pdf'
+let g:vimtex_format_enabled = 1
+" Should move to local
+" let g:vimtex_view_general_viewer = 'SumatraPDF'
+" " add cygwin path prefix /cygwin64/
+" let g:vimtex_view_general_options
+"     \ = '-reuse-instance -forward-search @tex @line /cygwin64/@pdf'
 let g:vimtex_compiler_latexmk = {
   \ 'backend' : 'jobs',
     \ 'background' : 1,
@@ -106,13 +96,29 @@ let g:vimtex_compiler_latexmk = {
     \   '-interaction=nonstopmode',
     \ ],
     \}
+Plug 'leafgarland/typescript-vim'
+Plug 'suan/vim-instant-markdown'
 
-let g:airline#extensions#ale#enabled = 1
 
-let g:ale_echo_msg_format = '[%linter%/%severity%] %code: %%s'
-let g:ale_linters = { 'python' : ['flake8','pylint']}
-let g:ale_fixers = { 'markdown' : [ 'remove_trailing_lines', 'trim_whitespace' ] }
+" Colors
+Plug 'ap/vim-css-color'
+Plug 'AlessandroYorba/Alduin'
+Plug 'morhetz/gruvbox'
+
+" Testing
+Plug 'kannokanno/previm'
 let g:previm_open_cmd = 'xdg-open'
+
+" Misc
+Plug 'tweekmonster/startuptime.vim'
+
+
+call plug#end()
+
+" Plugin Configuration {{{
+
+
+
 
 
 function! s:latexSurround()
