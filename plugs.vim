@@ -31,6 +31,14 @@ Plug 'tpope/vim-jdaddy'
 
 " AndrewRadev
 Plug 'AndrewRadev/sideways.vim'
+nnoremap <a :SidewaysLeft<cr>
+nnoremap >a :SidewaysRight<cr>
+omap aa <Plug>SidewaysArgumentTextobjA
+xmap aa <Plug>SidewaysArgumentTextobjA
+omap ia <Plug>SidewaysArgumentTextobjI
+xmap ia <Plug>SidewaysArgumentTextobjI
+
+
 Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/switch.vim'
@@ -97,7 +105,6 @@ let g:vimtex_compiler_latexmk = {
     \ ],
     \}
 Plug 'leafgarland/typescript-vim'
-Plug 'suan/vim-instant-markdown'
 
 
 " Colors
