@@ -43,6 +43,9 @@ Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/switch.vim'
 
+" Movement
+Plug 'justinmk/vim-sneak'
+
 " Helpers
 Plug 'Olical/vim-enmasse'
 
@@ -72,6 +75,8 @@ let g:ale_linters = { 'python' : ['flake8','pylint']}
 let g:ale_fixers = { 'markdown' : [ 'remove_trailing_lines', 'trim_whitespace' ] }
 " Ale in Airline
 let g:airline#extensions#ale#enabled = 1
+vmap <Enter> <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 " junegunn
 Plug 'junegunn/vim-easy-align'
