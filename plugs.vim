@@ -46,6 +46,9 @@ Plug 'AndrewRadev/switch.vim'
 " Helpers
 Plug 'Olical/vim-enmasse'
 
+" Movement
+Plug 'justinmk/vim-sneak'
+let g:sneak#label = 1
 
 " Statusline
 Plug 'vim-airline/vim-airline'
