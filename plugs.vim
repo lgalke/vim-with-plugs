@@ -45,10 +45,10 @@ Plug 'AndrewRadev/switch.vim'
 
 " Movement
 Plug 'justinmk/vim-sneak'
+let g:sneak#label = 1
 
 " Helpers
 Plug 'Olical/vim-enmasse'
-
 
 " Statusline
 Plug 'vim-airline/vim-airline'
@@ -60,6 +60,8 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'reedes/vim-wordy'
 Plug 'reedes/vim-litecorrect'
 
+" Typescript
+Plug 'leafgarland/typescript-vim'
 
 " Pandoc
 Plug 'vim-pandoc/vim-pandoc'
@@ -83,6 +85,10 @@ Plug 'junegunn/vim-easy-align'
 
 " haya14busa
 Plug 'haya14busa/vim-edgemotion'
+map <C-j> <Plug>(edgemotion-j)
+map <C-k> <Plug>(edgemotion-k)
+
+
 Plug 'haya14busa/vim-auto-programming'
 set completefunc=autoprogramming#complete
 
@@ -111,7 +117,7 @@ let g:vimtex_compiler_latexmk = {
     \   '-interaction=nonstopmode',
     \ ],
     \}
-Plug 'leafgarland/typescript-vim'
+
 
 
 " Colors
