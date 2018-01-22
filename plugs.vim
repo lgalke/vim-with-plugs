@@ -43,13 +43,15 @@ Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/switch.vim'
 
+" Movement
+Plug 'justinmk/vim-sneak'
+let g:sneak#label = 1
+
 " Helpers
 Plug 'Olical/vim-enmasse'
 
-
 " Statusline
 Plug 'vim-airline/vim-airline'
-let g:airline#extensions#ale#enabled = 1
 
 " Python
 Plug 'Vimjas/vim-python-pep8-indent'
@@ -58,6 +60,8 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'reedes/vim-wordy'
 Plug 'reedes/vim-litecorrect'
 
+" Typescript
+Plug 'leafgarland/typescript-vim'
 
 " Pandoc
 Plug 'vim-pandoc/vim-pandoc'
@@ -71,13 +75,22 @@ Plug 'w0rp/ale'
 let g:ale_echo_msg_format = '[%linter%/%severity%] %code: %%s'
 let g:ale_linters = { 'python' : ['flake8','pylint']}
 let g:ale_fixers = { 'markdown' : [ 'remove_trailing_lines', 'trim_whitespace' ] }
+" Ale in Airline
+let g:airline#extensions#ale#enabled = 1
+vmap <Enter> <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 " junegunn
 Plug 'junegunn/vim-easy-align'
 
 " haya14busa
 Plug 'haya14busa/vim-edgemotion'
+map <C-j> <Plug>(edgemotion-j)
+map <C-k> <Plug>(edgemotion-k)
+
+
 Plug 'haya14busa/vim-auto-programming'
+set completefunc=autoprogramming#complete
 
 " FileType-specific
 Plug 'lervag/vimtex'
@@ -104,7 +117,7 @@ let g:vimtex_compiler_latexmk = {
     \   '-interaction=nonstopmode',
     \ ],
     \}
-Plug 'leafgarland/typescript-vim'
+
 
 
 " Colors
