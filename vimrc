@@ -55,6 +55,7 @@ augroup vimrc_ex
         \ | setlocal norelativenumber
         \ | setlocal isk+=-
         \ | call litecorrect#init()
+  au FileType python setlocal fdm=indent
 augroup END
 " }}}
 
