@@ -8,6 +8,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-vividchalk'
 Plug 'tpope/vim-jdaddy'
 Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-dispatch'
 nnoremap <leader>m :Make<CR>
 nnoremap <leader>d :Dispatch<CR>
