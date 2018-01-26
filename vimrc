@@ -28,6 +28,7 @@ let g:markdown_fenced_languages = ["sh", "python", "sql"]
 
 " Map {{{
 nmap     Q              gq
+nnoremap <C-s>          :w<CR>
 inoremap <c-c>          <Esc>
 nnoremap <c-g>          :nohlsearch<CR><C-G>
 map      H              ^
