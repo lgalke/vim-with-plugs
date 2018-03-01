@@ -83,6 +83,10 @@ nmap ga <Plug>(EasyAlign)
 
 " junegunn
 Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 " haya14busa
 Plug 'haya14busa/vim-edgemotion'
