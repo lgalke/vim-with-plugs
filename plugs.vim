@@ -19,6 +19,7 @@ nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gf :Gfetch<CR>
 nnoremap <leader>gm :Gmerge<CR>
 nnoremap <leader>gp :Gpush<CR>
+nnoremap <leader>gw :Gwrite<CR>
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-unimpaired'
