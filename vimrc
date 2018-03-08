@@ -22,6 +22,9 @@ set undodir=$TEMP,$TMP,.
 set listchars=eol:$,tab:>-,nbsp:~,trail:-,extends:>,precedes:<
 " latex rubbish
 set wildignore=*.bcf,*.nav,*.run.xml,*.snm,*.latexmain,*.aux,*.bbl,*.blg,*.fdb_latexmk,*.fls,*.out,*.synctex.gz,*.toc
+set guioptions-=e
+set showtabline=always
+
 
 let g:markdown_fenced_languages = ["sh", "python", "sql"]
 " }}}
