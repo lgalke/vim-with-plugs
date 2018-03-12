@@ -1,4 +1,6 @@
-call plug#begin('~/.vim/plugged')
+" Either '.vim' on unix or 'vimfiles' on windows.
+let s:vimdir = fnamemodify(expand('$MYVIMRC'), ':h:t')
+call plug#begin('~/' . s:vimdir . '/plugged')
 
 " tpope
 Plug 'tpope/vim-sensible'
