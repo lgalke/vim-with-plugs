@@ -59,8 +59,8 @@ Plug 'reedes/vim-litecorrect'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'lgalke/vim-ernest'
-autocmd! User GoyoEnter Limelight | Ernest
-autocmd! User ErnestLeave Limelight! | Goyo!
+autocmd! User GoyoEnter ALEDisable | Limelight | Ernest
+autocmd! User ErnestLeave Limelight! | ALEEnable | Goyo! 
 
 " Python
 Plug 'Vimjas/vim-python-pep8-indent'
