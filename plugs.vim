@@ -1,4 +1,6 @@
-call plug#begin('~/.vim/plugged')
+" Either '.vim' on unix or 'vimfiles' on windows.
+let s:vimdir = fnamemodify(expand('$MYVIMRC'), ':h:t')
+call plug#begin('~/' . s:vimdir . '/plugged')
 
 " tpope
 Plug 'tpope/vim-sensible'
@@ -30,6 +32,7 @@ Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-jdaddy'
+Plug 'tpope/vim-db'
 
 " AndrewRadev
 Plug 'AndrewRadev/sideways.vim'
@@ -39,8 +42,6 @@ omap aa <Plug>SidewaysArgumentTextobjA
 xmap aa <Plug>SidewaysArgumentTextobjA
 omap ia <Plug>SidewaysArgumentTextobjI
 xmap ia <Plug>SidewaysArgumentTextobjI
-
-
 Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/switch.vim'
@@ -52,15 +53,18 @@ let g:sneak#label = 1
 " Helpers
 Plug 'Olical/vim-enmasse'
 
-" Statusline
-Plug 'vim-airline/vim-airline'
+" Writing
+Plug 'reedes/vim-wordy'
+Plug 'reedes/vim-litecorrect'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'lgalke/vim-ernest'
+autocmd! User GoyoEnter Limelight | Ernest
+autocmd! User ErnestLeave Limelight! | Goyo!
 
 " Python
 Plug 'Vimjas/vim-python-pep8-indent'
 
-" Prose
-Plug 'reedes/vim-wordy'
-Plug 'reedes/vim-litecorrect'
 
 " Typescript
 Plug 'leafgarland/typescript-vim'
