@@ -24,7 +24,7 @@ set wildignore=*.bcf,*.nav,*.run.xml,*.snm,*.latexmain,*.aux,*.bbl,*.blg,*.fdb_l
 " Always show tabline
 set guioptions-=e
 set showtabline=2
-
+set incsearch hlsearch
 
 let g:markdown_fenced_languages = ["sh", "python", "sql", "vim"]
 " }}}
