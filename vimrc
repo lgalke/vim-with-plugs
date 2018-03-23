@@ -14,7 +14,7 @@ set foldopen+=jump
 set conceallevel=2
 set number relativenumber
 set ignorecase smartcase
-set nowrap sidescroll=5
+set nowrap
 set undofile
 " Never use windows line endigs
 set undodir=$TEMP,$TMP,.

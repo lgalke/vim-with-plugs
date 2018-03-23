@@ -62,6 +62,9 @@ Plug 'lgalke/vim-ernest'
 autocmd! User GoyoEnter ALEDisable | Limelight | Ernest
 autocmd! User ErnestLeave Limelight! | ALEEnable | Goyo! 
 
+" Compilers
+Plug 'lgalke/vim-compiler-vale'
+
 " Python
 Plug 'Vimjas/vim-python-pep8-indent'
 
