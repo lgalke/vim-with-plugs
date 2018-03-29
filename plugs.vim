@@ -33,6 +33,7 @@ Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-jdaddy'
 Plug 'tpope/vim-db'
+Plug 'tpope/vim-flagship'
 
 " AndrewRadev
 Plug 'AndrewRadev/sideways.vim'
@@ -62,6 +63,9 @@ Plug 'lgalke/vim-ernest'
 autocmd! User GoyoEnter ALEDisable | Limelight | Ernest
 autocmd! User ErnestLeave Limelight! | ALEEnable | Goyo! 
 
+" Compilers
+Plug 'lgalke/vim-compiler-vale'
+
 " Python
 Plug 'Vimjas/vim-python-pep8-indent'
 
@@ -81,13 +85,12 @@ Plug 'w0rp/ale'
 let g:ale_echo_msg_format = '[%linter%/%severity%] %code: %%s'
 let g:ale_linters = { 'python' : ['flake8','pylint']}
 let g:ale_fixers = { 'markdown' : [ 'remove_trailing_lines', 'trim_whitespace' ] }
-" Ale in Airline
-let g:airline#extensions#ale#enabled = 1
-vmap <Enter> <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
 
 " junegunn
 Plug 'junegunn/vim-easy-align'
+vmap <Enter> <Plug>(EasyAlign)
+" Could be <c-g> a to not conflict with vim-characterize
+nmap ga <Plug>(EasyAlign)
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 

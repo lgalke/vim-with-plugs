@@ -6,25 +6,28 @@ runtime ftplugin/man.vim
 
 " {{{ Basic Options
 
+set number relativenumber
 set autowriteall
 " sub-directories for find
 set path+=**
+" Virtual in Block mode
 set virtualedit+=block
+" Open the folds on jumps
 set foldopen+=jump
 set conceallevel=2
-set number relativenumber
-set ignorecase smartcase
-set nowrap sidescroll=5
+set nowrap
+" Undo config
 set undofile
-" Never use windows line endigs
 set undodir=$TEMP,$TMP,.
 set listchars=eol:$,tab:>-,nbsp:~,trail:-,extends:>,precedes:<
 " latex rubbish
 set wildignore=*.bcf,*.nav,*.run.xml,*.snm,*.latexmain,*.aux,*.bbl,*.blg,*.fdb_latexmk,*.fls,*.out,*.synctex.gz,*.toc
 " Always show tabline
-set guioptions-=e
 set showtabline=2
-
+set guioptions-=e
+" Search and Replace
+set incsearch hlsearch
+set ignorecase smartcase
 
 let g:markdown_fenced_languages = ["sh", "python", "sql", "vim"]
 " }}}
@@ -33,7 +36,6 @@ let g:markdown_fenced_languages = ["sh", "python", "sql", "vim"]
 nmap     Q              gq
 nnoremap <C-s>          :w<CR>
 inoremap <c-c>          <Esc>
-nnoremap <c-g>          :nohlsearch<CR><C-G>
 map      H              ^
 map      L              $
 xmap     <              <gv
