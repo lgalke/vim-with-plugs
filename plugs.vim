@@ -47,6 +47,10 @@ Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/switch.vim'
 
+" File movement
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+nnoremap f<CR> :FZF<CR>
+
 " Movement
 Plug 'justinmk/vim-sneak'
 let g:sneak#label = 1
