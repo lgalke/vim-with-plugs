@@ -36,13 +36,13 @@ Plug 'tpope/vim-db'
 Plug 'tpope/vim-flagship'
 
 " AndrewRadev
-Plug 'AndrewRadev/sideways.vim'
-nnoremap <a :SidewaysLeft<cr>
-nnoremap >a :SidewaysRight<cr>
-omap aa <Plug>SidewaysArgumentTextobjA
-xmap aa <Plug>SidewaysArgumentTextobjA
-omap ia <Plug>SidewaysArgumentTextobjI
-xmap ia <Plug>SidewaysArgumentTextobjI
+" Plug 'AndrewRadev/sideways.vim'
+" nnoremap <a :SidewaysLeft<cr>
+" nnoremap >a :SidewaysRight<cr>
+" omap aa <Plug>SidewaysArgumentTextobjA
+" xmap aa <Plug>SidewaysArgumentTextobjA
+" omap ia <Plug>SidewaysArgumentTextobjI
+" xmap ia <Plug>SidewaysArgumentTextobjI
 Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/switch.vim'
@@ -54,6 +54,12 @@ nnoremap f<CR> :FZF<CR>
 " Movement
 Plug 'justinmk/vim-sneak'
 let g:sneak#label = 1
+Plug 'haya14busa/vim-edgemotion'
+map <C-j> <Plug>(edgemotion-j)
+map <C-k> <Plug>(edgemotion-k)
+
+" Text Objects
+Plug 'wellle/targets.vim'
 
 " Helpers
 Plug 'Olical/vim-enmasse'
@@ -98,10 +104,6 @@ nmap ga <Plug>(EasyAlign)
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
-" haya14busa
-Plug 'haya14busa/vim-edgemotion'
-map <C-j> <Plug>(edgemotion-j)
-map <C-k> <Plug>(edgemotion-k)
 
 
 Plug 'haya14busa/vim-auto-programming'
