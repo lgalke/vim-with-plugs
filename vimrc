@@ -75,7 +75,7 @@ syntax enable
 let g:alduin_Contract_Vampirism = 1
 let g:alduin_Shout_Fire_Breath = 1
 let g:alduin_Shout_Aura_Whisper = 1
-silent! colo alduin
+silent! colo challenger_deep
 
 if filereadable(expand("~/vimrc.local"))
   source ~/vimrc.local

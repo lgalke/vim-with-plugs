@@ -141,6 +141,7 @@ let g:vimtex_compiler_latexmk = {
 Plug 'ap/vim-css-color'
 Plug 'AlessandroYorba/Alduin'
 Plug 'morhetz/gruvbox'
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 
 " Testing
 Plug 'kannokanno/previm'
@@ -153,10 +154,6 @@ Plug 'tweekmonster/startuptime.vim'
 call plug#end()
 
 " Plugin Configuration {{{
-
-
-
-
 
 function! s:latexSurround()
    let b:surround_{char2nr("e")}
