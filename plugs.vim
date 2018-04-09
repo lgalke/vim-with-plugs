@@ -51,12 +51,26 @@ Plug 'AndrewRadev/switch.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 nnoremap f<CR> :FZF<CR>
 
-" Movement
+" Movement {{{
 Plug 'justinmk/vim-sneak'
 let g:sneak#label = 1
 Plug 'haya14busa/vim-edgemotion'
 map <C-j> <Plug>(edgemotion-j)
 map <C-k> <Plug>(edgemotion-k)
+" }}}
+
+" AutoComplete {{{
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+if executable('pyls')
+  " pip install python-language-server
+  au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd' : {server_info->['pyls']},
+        \ 'whitelist': ['python'],
+        \ })
+endif
+" }}}
 
 " Text Objects
 Plug 'wellle/targets.vim'

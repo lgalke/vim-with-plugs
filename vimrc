@@ -45,6 +45,8 @@ nnoremap <leader>v      :e $MYVIMRC<CR>
 nnoremap <leader>b      :ls<CR>:b<Space>
 " Text objects
 
+nnoremap <leader>fw :%s/\m,\zs\ze\S)/<Space>/eg<CR>:%s/\m\s\+$//eg<CR>
+
 " }}}
 " {{{ Functions
 " }}}
