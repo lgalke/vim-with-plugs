@@ -2,7 +2,7 @@
 let s:vimdir = fnamemodify(expand('$MYVIMRC'), ':h:t')
 call plug#begin('~/' . s:vimdir . '/plugged')
 
-" tpope
+" tpope {{{
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -34,6 +34,7 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-jdaddy'
 Plug 'tpope/vim-db'
 Plug 'tpope/vim-flagship'
+" }}}
 
 " AndrewRadev
 " Plug 'AndrewRadev/sideways.vim'
@@ -47,9 +48,10 @@ Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/switch.vim'
 
-" File movement
+" File movement {{{
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 nnoremap f<CR> :FZF<CR>
+" }}}
 
 " Movement {{{
 Plug 'justinmk/vim-sneak'
@@ -62,6 +64,10 @@ map <C-k> <Plug>(edgemotion-k)
 " AutoComplete {{{
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
+augroup lsp_complete_omnifunc
+  " Reset lsp au group and incrementally add per-ft omnifuncs
+  au!
+augroup END
 if executable('pyls')
   " pip install python-language-server
   au User lsp_setup call lsp#register_server({
@@ -70,6 +76,8 @@ if executable('pyls')
         \ 'whitelist': ['python'],
         \ })
 endif
+
+
 " }}}
 
 " Text Objects
@@ -78,7 +86,7 @@ Plug 'wellle/targets.vim'
 " Helpers
 Plug 'Olical/vim-enmasse'
 
-" Writing
+" Writing {{{
 Plug 'reedes/vim-wordy'
 Plug 'reedes/vim-litecorrect'
 Plug 'junegunn/goyo.vim'
@@ -86,16 +94,17 @@ Plug 'junegunn/limelight.vim'
 Plug 'lgalke/vim-ernest'
 autocmd! User GoyoEnter ALEDisable | Limelight | Ernest
 autocmd! User ErnestLeave Limelight! | ALEEnable | Goyo! 
+" }}}
+
+" Syntax
+Plug 'leafgarland/typescript-vim'
 
 " Compilers
 Plug 'lgalke/vim-compiler-vale'
 
-" Python
+" Indent
 Plug 'Vimjas/vim-python-pep8-indent'
 
-
-" Typescript
-Plug 'leafgarland/typescript-vim'
 
 " Pandoc
 Plug 'vim-pandoc/vim-pandoc'
@@ -104,26 +113,25 @@ let g:pandoc#filetypes#pandoc_markdown = 0
 let g:pandoc#biblio#use_bibtool = 1
 let g:pandoc#completion#bib#mode = "citeproc"
 
-" Linter
+" Linting {{{
 Plug 'w0rp/ale' 
-let g:ale_echo_msg_format = '[%linter%/%severity%] %code: %%s'
-let g:ale_linters = { 'python' : ['flake8','pylint']}
+let g:ale_echo_msg_format = '[%linter%/%severity%] %...code...%: %s'
+let g:ale_linters = { 'python' : ['flake8','pylint', 'pyls']}
 let g:ale_fixers = { 'markdown' : [ 'remove_trailing_lines', 'trim_whitespace' ] }
+" }}}
 
-" junegunn
+" Align {{{
 Plug 'junegunn/vim-easy-align'
 vmap <Enter> <Plug>(EasyAlign)
 " Could be <c-g> a to not conflict with vim-characterize
 nmap ga <Plug>(EasyAlign)
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-
+" }}}
 
 
 Plug 'haya14busa/vim-auto-programming'
 set completefunc=autoprogramming#complete
 
-" FileType-specific
+" Latex {{{
 Plug 'lervag/vimtex'
 let g:vimtex_fold_enabled = 1
 let g:vimtex_fold_manual = 1
@@ -148,7 +156,7 @@ let g:vimtex_compiler_latexmk = {
     \   '-interaction=nonstopmode',
     \ ],
     \}
-
+" }}}
 
 
 " Colors
@@ -163,6 +171,9 @@ let g:previm_open_cmd = 'xdg-open'
 
 " Misc
 Plug 'tweekmonster/startuptime.vim'
+
+" VimWiki
+Plug 'vimwiki/vimwiki'
 
 
 call plug#end()
