@@ -7,6 +7,7 @@ runtime ftplugin/man.vim
 " {{{ Basic Options
 
 set number relativenumber
+set cursorline
 set autowriteall
 " sub-directories for find
 set path+=**
@@ -74,10 +75,9 @@ endif
 filetype plugin indent on
 syntax enable
 " Cycle through colors
-let g:alduin_Contract_Vampirism = 1
 let g:alduin_Shout_Fire_Breath = 1
-let g:alduin_Shout_Aura_Whisper = 1
-silent! colo challenger_deep
+" let g:alduin_Shout_Aura_Whisper = 1
+silent! colo murphy
 
 if filereadable(expand("~/vimrc.local"))
   source ~/vimrc.local
