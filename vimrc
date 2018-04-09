@@ -82,4 +82,5 @@ silent! colo challenger_deep
 if filereadable(expand("~/vimrc.local"))
   source ~/vimrc.local
 endif
+
 " }}}
