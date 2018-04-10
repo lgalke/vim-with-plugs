@@ -174,6 +174,9 @@ Plug 'tweekmonster/startuptime.vim'
 
 " VimWiki
 Plug 'vimwiki/vimwiki'
+let g:vimwiki_hl_headers = 1
+let g:vimwiki_hl_cb_checked = 1
+let g:vimwiki_folding = 'expr'
 
 
 call plug#end()
