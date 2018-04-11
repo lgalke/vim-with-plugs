@@ -37,13 +37,13 @@ Plug 'tpope/vim-flagship'
 " }}}
 
 " AndrewRadev
-" Plug 'AndrewRadev/sideways.vim'
-" nnoremap <a :SidewaysLeft<cr>
-" nnoremap >a :SidewaysRight<cr>
-" omap aa <Plug>SidewaysArgumentTextobjA
-" xmap aa <Plug>SidewaysArgumentTextobjA
-" omap ia <Plug>SidewaysArgumentTextobjI
-" xmap ia <Plug>SidewaysArgumentTextobjI
+Plug 'AndrewRadev/sideways.vim'
+nnoremap <a :SidewaysLeft<cr>
+nnoremap >a :SidewaysRight<cr>
+omap aa <Plug>SidewaysArgumentTextobjA
+xmap aa <Plug>SidewaysArgumentTextobjA
+omap ia <Plug>SidewaysArgumentTextobjI
+xmap ia <Plug>SidewaysArgumentTextobjI
 Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/switch.vim'
@@ -81,7 +81,8 @@ endif
 " }}}
 
 " Text Objects
-Plug 'wellle/targets.vim'
+" too many false positives
+" Plug 'wellle/targets.vim'
 
 " Helpers
 Plug 'Olical/vim-enmasse'

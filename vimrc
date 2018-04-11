@@ -17,6 +17,7 @@ set virtualedit+=block
 set foldopen+=jump
 set conceallevel=2
 set nowrap
+set visualbell
 " Undo config
 set undofile
 set undodir=$TEMP,$TMP,.
@@ -77,7 +78,7 @@ syntax enable
 " Cycle through colors
 let g:alduin_Shout_Fire_Breath = 1
 " let g:alduin_Shout_Aura_Whisper = 1
-silent! colo murphy
+silent! colo vividchalk
 
 if filereadable(expand("~/vimrc.local"))
   source ~/vimrc.local
