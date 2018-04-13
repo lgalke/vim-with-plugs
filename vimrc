@@ -7,6 +7,7 @@ runtime ftplugin/man.vim
 " {{{ Basic Options
 
 set number relativenumber
+set cursorline
 set autowriteall
 " sub-directories for find
 set path+=**
@@ -16,12 +17,13 @@ set virtualedit+=block
 set foldopen+=jump
 set conceallevel=2
 set nowrap
+set visualbell
 " Undo config
 set undofile
 set undodir=$TEMP,$TMP,.
 set listchars=eol:$,tab:>-,nbsp:~,trail:-,extends:>,precedes:<
 " latex rubbish
-set wildignore=*.bcf,*.nav,*.run.xml,*.snm,*.latexmain,*.aux,*.bbl,*.blg,*.fdb_latexmk,*.fls,*.out,*.synctex.gz,*.toc
+set wildignore=*.bcf,*.nav,*.run.xml,*.snm,*.aux,*.bbl,*.blg,*.fdb_latexmk,*.fls,*.out,*.synctex.gz,*.toc
 " Always show tabline
 set showtabline=2
 set guioptions-=e
@@ -74,10 +76,9 @@ endif
 filetype plugin indent on
 syntax enable
 " Cycle through colors
-let g:alduin_Contract_Vampirism = 1
 let g:alduin_Shout_Fire_Breath = 1
-let g:alduin_Shout_Aura_Whisper = 1
-silent! colo challenger_deep
+" let g:alduin_Shout_Aura_Whisper = 1
+silent! colo vividchalk
 
 if filereadable(expand("~/vimrc.local"))
   source ~/vimrc.local
