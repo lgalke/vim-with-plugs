@@ -75,10 +75,7 @@ if has("termguicolors")
 endif
 filetype plugin indent on
 syntax enable
-" Cycle through colors
-let g:alduin_Shout_Fire_Breath = 1
-" let g:alduin_Shout_Aura_Whisper = 1
-silent! colo vividchalk
+silent! colo seoul256
 
 if filereadable(expand("~/vimrc.local"))
   source ~/vimrc.local
