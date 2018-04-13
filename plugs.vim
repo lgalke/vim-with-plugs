@@ -64,8 +64,8 @@ map <C-k> <Plug>(edgemotion-k)
 " AutoComplete {{{
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
-augroup lsp_complete_omnifunc
-  " Reset lsp au group and incrementally add per-ft omnifuncs
+augroup lsp_setup
+    " Reset lsp au group and incrementally add per-ft omnifuncs
   au!
 augroup END
 if executable('pyls')
@@ -93,8 +93,8 @@ Plug 'reedes/vim-litecorrect'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'lgalke/vim-ernest'
-autocmd! User GoyoEnter ALEDisable | Limelight | Ernest
-autocmd! User ErnestLeave Limelight! | ALEEnable | Goyo! 
+autocmd! User GoyoEnter ALEDisable | Limelight
+autocmd! User GoyoLeave Limelight! | ALEEnable
 " }}}
 
 " Syntax
@@ -165,6 +165,7 @@ Plug 'ap/vim-css-color'
 Plug 'AlessandroYorba/Alduin'
 Plug 'morhetz/gruvbox'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'junegunn/seoul256.vim'
 
 " Testing
 Plug 'kannokanno/previm'
