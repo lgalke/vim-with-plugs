@@ -15,12 +15,13 @@ set path+=**
 set virtualedit+=block
 " Open the folds on jumps
 set foldopen+=jump
+" Initial fold level
+set foldlevel=1
+" Conceal if possible
 set conceallevel=2
 set nowrap
 set visualbell
-" Undo config
-set undofile
-set undodir=$TEMP,$TMP,.
+
 set listchars=eol:$,tab:>-,nbsp:~,trail:-,extends:>,precedes:<
 " latex rubbish
 set wildignore=*.bcf,*.nav,*.run.xml,*.snm,*.aux,*.bbl,*.blg,*.fdb_latexmk,*.fls,*.out,*.synctex.gz,*.toc
@@ -45,12 +46,19 @@ xmap     >              >gv
 nnoremap <leader>f      :find<Space>
 nnoremap <leader>v      :e $MYVIMRC<CR>
 nnoremap <leader>b      :ls<CR>:b<Space>
-" Text objects
 
 nnoremap <leader>fw :%s/\m,\zs\ze\S)/<Space>/eg<CR>:%s/\m\s\+$//eg<CR>
+inoremap <C-U> <C-G>u<C-U>
 
 " }}}
-" {{{ Functions
+" {{{ Commands
+" Convenient command to see the difference between the current buffer and the
+" file it was loaded from, thus the changes you made.
+" Only define it when not defined already.
+if !exists(":DiffOrig")
+  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
+		  \ | wincmd p | diffthis
+endif
 " }}}
 
 " Autocommands {{{
@@ -64,8 +72,17 @@ augroup vimrc_ex
         \ | setlocal nonumber
         \ | setlocal norelativenumber
         \ | setlocal isk+=-
-        \ | call litecorrect#init()
-  au FileType python setlocal fdm=indent
+          \ | call litecorrect#init()
+    au FileType python setlocal fdm=indent
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it when the position is invalid or when inside an event handler
+  " (happens when dropping a file on gvim).
+  " Also don't do it when the mark is in the first line, that is the default
+  " position when opening a file.
+  autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"zvzz" |
+    \ endif
 augroup END
 " }}}
 
