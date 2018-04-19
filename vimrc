@@ -5,12 +5,16 @@ runtime plugs.vim
 runtime ftplugin/man.vim
 
 " {{{ Basic Options
+" Dont ask whether to write but just do it
+set autowriteall
+" Yes I want permanent undo, but not in cwd...
 set undofile
 set undodir=/tmp,.
 
+" Fancy numbers
 set number relativenumber
+" Highlight current cursor line
 set cursorline
-set autowriteall
 " sub-directories for find
 set path+=**
 " Virtual in Block mode
