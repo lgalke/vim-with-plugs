@@ -5,6 +5,8 @@ runtime plugs.vim
 runtime ftplugin/man.vim
 
 " {{{ Basic Options
+set undofile
+set undodir=/tmp,.
 
 set number relativenumber
 set cursorline

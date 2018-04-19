@@ -179,6 +179,10 @@ Plug 'vimwiki/vimwiki'
 let g:vimwiki_hl_headers = 1
 let g:vimwiki_hl_cb_checked = 1
 let g:vimwiki_folding = 'expr'
+augroup vimwiki_autocommands
+  au!
+  au BufRead *diary.wiki VimwikiDiaryGenerateLinks
+augroup END
 
 
 call plug#end()
