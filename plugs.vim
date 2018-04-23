@@ -1,5 +1,6 @@
 " Either '.vim' on unix or 'vimfiles' on windows.
 let s:vimdir = fnamemodify(expand('$MYVIMRC'), ':h:t')
+
 call plug#begin('~/' . s:vimdir . '/plugged')
 
 " tpope {{{
@@ -30,6 +31,10 @@ Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-ragtag'
+inoremap <M-o> <Esc>o
+inoremap <C-j> <Down>
+let g:ragtag_global_maps = 1
+
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-jdaddy'
 Plug 'tpope/vim-db'
@@ -136,7 +141,7 @@ set completefunc=autoprogramming#complete
 Plug 'lervag/vimtex'
 let g:vimtex_fold_enabled = 1
 let g:vimtex_fold_manual = 1
-let g:vimtex_format_enabled = 1
+let g:vimtex_format_enabled = 0
 " Should move to local
 " let g:vimtex_view_general_viewer = 'SumatraPDF'
 " " add cygwin path prefix /cygwin64/
@@ -179,6 +184,10 @@ Plug 'vimwiki/vimwiki'
 let g:vimwiki_hl_headers = 1
 let g:vimwiki_hl_cb_checked = 1
 let g:vimwiki_folding = 'expr'
+augroup vimwiki_autocommands
+  au!
+  au BufRead *diary.wiki VimwikiDiaryGenerateLinks
+augroup END
 
 
 call plug#end()
