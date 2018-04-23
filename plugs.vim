@@ -78,7 +78,7 @@ if executable('pyls')
   au User lsp_setup call lsp#register_server({
         \ 'name': 'pyls',
         \ 'cmd' : {server_info->['pyls']},
-        \ 'whitelist': ['python'],
+        \ 'whitelist': ['python', 'python.torch'],
         \ })
 endif
 
@@ -122,7 +122,7 @@ let g:pandoc#completion#bib#mode = "citeproc"
 " Linting {{{
 Plug 'w0rp/ale' 
 let g:ale_echo_msg_format = '[%linter%/%severity%] %...code...%: %s'
-let g:ale_linters = { 'python' : ['flake8','pylint', 'pyls']}
+let g:ale_linters = { 'python' : ['pyls', 'pylint']}
 let g:ale_fixers = { 'markdown' : [ 'remove_trailing_lines', 'trim_whitespace' ] }
 " }}}
 

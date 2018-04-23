@@ -13,7 +13,6 @@ endif
 " }}}
 
 " Packages {{{
-syn keyword torchInclude torch optim
 " }}}
 
 " torch {{{
@@ -54,7 +53,6 @@ endif
 " }}]
 
 " torch.nn {{{
-syn keyword torchInclude nn
 syn keyword torchType Parameter
 
 " Containers
@@ -83,7 +81,7 @@ syn keyword torchType Embedding EmbeddingBag
 " Distance functions
 syn keyword torchType CosineSimilarity PairwiseDistance
 " Loss functions
-syn keyword torchType L1Loss MSELoss CrossEntropyLoss NLLLoss PoissonNLLLoss NLLLoss2d KLDivLoss BCEWithLogitsLoss MarginRankingLoss HingeEmbeddingLoss MultiLabelMarginLoss SmoothL1Loss MultiLabelSoftMarginLoss CosineEmbeddingLoss MultiMarginLoss TripletMarginLoss
+syn keyword torchType L1Loss MSELoss CrossEntropyLoss NLLLoss PoissonNLLLoss NLLLoss2d KLDivLoss BCEWithLogitsLoss MarginRankingLoss HingeEmbeddingLoss MultiLabelMarginLoss SmoothL1Loss SoftMarginLoss MultiLabelSoftMarginLoss CosineEmbeddingLoss MultiMarginLoss TripletMarginLoss
 " Vision layers
 syn keyword torchType PixelShuffle Upsample UpsamplingNearest2d UpsamplingBilinear2d
 
@@ -91,11 +89,6 @@ syn keyword torchType PixelShuffle Upsample UpsamplingNearest2d UpsamplingBiline
 
 " torch.nn.functional {{{
 
-syn keyword torchInclude functional
-if g:torch_highlight_abbrevs
-  " import torch.nn.functional as F
-  syn keyword torchInclude F
-endif
 " Convolution functions
 syn keyword torchFunction conv1d conv2d conv3d conv_transpose1d conv_transpose2d conv_transpose3d
 " Pooling functions
@@ -117,8 +110,17 @@ syn keyword torchFunction pixel_shuffle pad upsample upsample_nearest upsample_b
 
 " }}}
 
+" torch.optim {{{
+
+syn keyword torchType Optimizer
+syn keyword torchFunction add_param_group load_state_dict state_dict step zero_grad
+syn keyword torchType Adadelta Adagrad Adam SparseAdam Adamax ASGD LBFGS RMSprop Rprop SGD
+syn keyword torchType LambdaLR StepLR MultiStepLR ExponentialLR CosineAnnealingLR ReduceLROnPlateau
+
+" }}}
+
 " torch.autograd {{{
-syn keyword torchInclude autograd
+
 syn keyword torchFunction backward grad
 syn keyword torchType Variable Function
 if g:torch_highlight_abbrevs
@@ -126,12 +128,16 @@ if g:torch_highlight_abbrevs
 endif
 syn keyword torchFunction detach detach_ register_hook retain_grad
 " Profiler
-syn keyword torchInclude profiler
 syn keyword torchType profile
+
+" }}}
+
+" torch.cuda {{{
+
+syn keyword torchFunction cuda
 
 " }}}
 
 " Linking
 highlight link torchType Type
-highlight link torchInclude Include
 highlight link torchFunction Function
