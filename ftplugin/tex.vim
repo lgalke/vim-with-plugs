@@ -3,6 +3,8 @@ inoremap <buffer> ** \textbf{}<Left>
 
 " Custom sentence format expression
 setlocal formatexpr=sentence#format()
+
+" Q formats paragraph by first joining all lines and then re-formatting them.
 nnoremap <buffer> Q vipJgqq
 
 " Autoformat
