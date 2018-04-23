@@ -3,6 +3,7 @@ inoremap <buffer> ** \textbf{}<Left>
 
 " Custom sentence format expression
 setlocal formatexpr=sentence#format()
+nnoremap <buffer> Q vipJgqq
 
 " Autoformat
 " setlocal fo+=a
