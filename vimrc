@@ -3,6 +3,7 @@ let      mapleader      =  "\<Space>"
 let      maplocalleader =  "\\"
 runtime plugs.vim
 runtime ftplugin/man.vim
+let g:ft_man_folding_enable = 1
 
 " {{{ Basic Options
 " Dont ask whether to write but just do it
