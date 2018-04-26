@@ -1,7 +1,7 @@
 set nocompatible
 let      mapleader      =  "\<Space>"
-let      maplocalleader =  "\\"
-runtime plugs.vim
+  let      maplocalleader =  "\\"
+  runtime plugs.vim
 runtime ftplugin/man.vim
 let g:ft_man_folding_enable = 1
 
@@ -12,10 +12,13 @@ set autowriteall
 set undofile
 set undodir=/tmp,.
 
+" Disable mouse
+set mouse=
+
 " Fancy numbers
-set number relativenumber
+" set number relativenumber
 " Highlight current cursor line
-set cursorline
+" set cursorline
 " sub-directories for find
 set path+=**
 " Virtual in Block mode
