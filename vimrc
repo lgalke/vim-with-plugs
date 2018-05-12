@@ -26,11 +26,13 @@ set virtualedit+=block
 " Open the folds on jumps
 set foldopen+=jump
 " Initial fold level
-set foldlevel=1
+set foldlevel=2
 " Conceal if possible
 set conceallevel=2
 set nowrap
 set visualbell
+
+set backupdir=./.backup,~/.backup,.,/tmp
 
 set listchars=eol:$,tab:>-,nbsp:~,trail:-,extends:>,precedes:<
 " latex rubbish
