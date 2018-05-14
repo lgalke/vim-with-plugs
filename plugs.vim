@@ -56,6 +56,7 @@ Plug 'AndrewRadev/switch.vim'
 " File movement {{{
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'wincent/ferret'
+Plug 'ludovicchabant/vim-gutentags'
 " }}}
 
 " Movement {{{
