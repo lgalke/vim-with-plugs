@@ -54,8 +54,6 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/switch.vim'
 
 " File movement {{{
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'sh ./install --all' }
-" nnoremap f<CR> :FZF<CR>
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'wincent/ferret'
 " }}}
