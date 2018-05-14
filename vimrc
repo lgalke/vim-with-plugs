@@ -1,7 +1,7 @@
 set nocompatible
 let      mapleader      =  "\<Space>"
-  let      maplocalleader =  "\\"
-  runtime plugs.vim
+let      maplocalleader =  "\\"
+runtime plugs.vim
 runtime ftplugin/man.vim
 let g:ft_man_folding_enable = 1
 
