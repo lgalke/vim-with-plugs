@@ -125,6 +125,10 @@ Plug 'w0rp/ale'
 let g:ale_echo_msg_format = '[%linter%/%severity%] %...code...%: %s'
 let g:ale_linters = { 'python' : ['pyls', 'pylint']}
 let g:ale_fixers = { 'markdown' : [ 'remove_trailing_lines', 'trim_whitespace' ] }
+nnoremap <leader>af :ALEFix<CR>
+nnoremap <leader>an :ALENextWrap<CR>
+nnoremap <leader>ap :ALEPrevWrap<CR>
+nnoremap <leader>ai :ALEInfo<CR>
 " }}}
 
 " Align {{{
