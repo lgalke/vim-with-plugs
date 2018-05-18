@@ -103,6 +103,10 @@ autocmd! User GoyoEnter ALEDisable | Limelight
 autocmd! User GoyoLeave Limelight! | ALEEnable
 " }}}
 
+" Folding
+Plug 'Konfekt/FastFold'
+Plug 'tmhedberg/SimpylFold'
+
 " Syntax
 Plug 'leafgarland/typescript-vim'
 

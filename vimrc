@@ -78,14 +78,12 @@ augroup vimrc_ex
   au!
   au FileType vim setlocal fdm=marker
   au FileType qf,help nnoremap <buffer> q :q!<CR>
-  au FileType sql setlocal fdm=syntax
   au FileType tex,markdown,txt,rst
         \ setlocal spell
         \ | setlocal nonumber
         \ | setlocal norelativenumber
         \ | setlocal isk+=-
           \ | call litecorrect#init()
-    au FileType python setlocal fdm=indent
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
   " (happens when dropping a file on gvim).
