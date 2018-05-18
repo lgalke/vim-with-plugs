@@ -167,7 +167,17 @@ let g:vimtex_compiler_latexmk = {
     \   '-interaction=nonstopmode',
     \ ],
     \}
-" }}}
+"
+function! s:latexSurround()
+   let b:surround_{char2nr("e")}
+     \ = "\\begin{\1environment: \1}\n\t\r\n\\end{\1\1}"
+   let b:surround_{char2nr("c")} = "\\\1command: \1{\r}"
+endfunction
+augroup plugs_ex
+  au!
+  au FileType tex call s:latexSurround()
+augroup END
+"}}}
 
 
 " Colors
@@ -184,7 +194,10 @@ let g:previm_open_cmd = 'xdg-open'
 " Misc
 Plug 'tweekmonster/startuptime.vim'
 
-" VimWiki
+" Organizing
+Plug 'freitass/todo.txt-vim'
+Plug 'lgalke/gather-todo.txt-vim'
+
 Plug 'vimwiki/vimwiki'
 let g:vimwiki_hl_headers = 1
 let g:vimwiki_hl_cb_checked = 1
@@ -199,16 +212,6 @@ call plug#end()
 
 " Plugin Configuration {{{
 
-function! s:latexSurround()
-   let b:surround_{char2nr("e")}
-     \ = "\\begin{\1environment: \1}\n\t\r\n\\end{\1\1}"
-   let b:surround_{char2nr("c")} = "\\\1command: \1{\r}"
-endfunction
-augroup plugs_ex
-  au!
-  au FileType tex call s:latexSurround()
-  au FileType typescript setlocal fdm=syntax
-augroup END
 
 function! s:power_safe_mode(on)
   if a:on
