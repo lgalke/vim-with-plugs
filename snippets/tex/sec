@@ -1,0 +1,3 @@
+\section{${1:_section_headline}}\label{sec:${2:_section_label}}
+${0:% section body}
+

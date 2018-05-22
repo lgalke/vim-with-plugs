@@ -1,0 +1,2 @@
+\subsection{${1:_subsection_headline}}\label{${sub:2:_subsection_label}}
+${0:% subsection body}

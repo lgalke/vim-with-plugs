@@ -1,0 +1,4 @@
+${0:% What is the problem}
+${1:% Why is it a problem}
+${2:% How to solve it}
+

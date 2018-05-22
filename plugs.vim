@@ -82,8 +82,11 @@ if executable('pyls')
         \ 'whitelist': ['python', 'python.torch'],
         \ })
 endif
+" }}}
 
-
+" Snippets {{{
+Plug 'andreyorst/SimpleSnippets.vim'
+Plug 'andreyorst/SimpleSnippets-snippets'
 " }}}
 
 " Text Objects
