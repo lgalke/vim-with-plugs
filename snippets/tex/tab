@@ -1,0 +1,6 @@
+\begin{table}[ht]
+  \caption{${1:_caption}}\label{tab:${2:_label}}
+  \begin{tabular}{${3:_column_spec}}
+  	${0:% table body}
+  \end{tabular}
+\end{table}
