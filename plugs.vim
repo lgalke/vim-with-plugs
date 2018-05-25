@@ -186,6 +186,8 @@ augroup plugs_ex
 augroup END
 "}}}
 
+" Signs
+Plug 'mhinz/vim-signify'
 
 " Colors
 Plug 'ap/vim-css-color'
