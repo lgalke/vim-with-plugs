@@ -195,6 +195,7 @@ Plug 'AlessandroYorba/Alduin'
 Plug 'morhetz/gruvbox'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'junegunn/seoul256.vim'
+Plug 'reedes/vim-colors-pencil'
 
 " Testing
 Plug 'kannokanno/previm'
