@@ -102,7 +102,8 @@ if has("termguicolors")
 endif
 filetype plugin indent on
 syntax enable
-silent! colo seoul256
+silent! colo default
+set bg=dark
 
 if filereadable(expand("~/vimrc.local"))
   source ~/vimrc.local
