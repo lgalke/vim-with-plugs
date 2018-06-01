@@ -3,3 +3,4 @@ autoencoder
 hyperparameters
 softmax
 CBOW
+BLEU

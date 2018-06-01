@@ -87,6 +87,10 @@ endif
 " Snippets {{{
 Plug 'andreyorst/SimpleSnippets.vim'
 Plug 'andreyorst/SimpleSnippets-snippets'
+" Change this to avoid conflict with edgemotion
+let g:SimpleSnippetsJumpToLastTrigger = "<C-n>"
+nnoremap <Leader>se :SimpleSnippetsEdit<CR>
+nnoremap <Leader>sl :SimpleSnippetsList<CR>
 " }}}
 
 " Text Objects
