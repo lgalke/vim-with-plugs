@@ -56,6 +56,7 @@ Plug 'AndrewRadev/switch.vim'
 " File movement {{{
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'wincent/ferret'
+" Ferret maps <leader>s
 Plug 'ludovicchabant/vim-gutentags'
 " }}}
 
@@ -89,8 +90,8 @@ Plug 'andreyorst/SimpleSnippets.vim'
 Plug 'andreyorst/SimpleSnippets-snippets'
 " Change this to avoid conflict with edgemotion
 let g:SimpleSnippetsJumpToLastTrigger = "<C-n>"
-nnoremap <Leader>se :SimpleSnippetsEdit<CR>
-nnoremap <Leader>sl :SimpleSnippetsList<CR>
+nnoremap <LocalLeader>se :SimpleSnippetsEdit<CR>
+nnoremap <LocalLeader>sl :SimpleSnippetsList<CR>
 " }}}
 
 " Text Objects
