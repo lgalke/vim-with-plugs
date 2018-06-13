@@ -1,0 +1,4 @@
+\begin{frame}
+  \frametitle{${1:heading}}
+  ${0:body}
+\end{frame}
