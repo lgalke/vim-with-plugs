@@ -65,6 +65,7 @@ Plug 'ludovicchabant/vim-gutentags'
 " }}}
 
 " Movement {{{
+Plug 'rhysd/conflict-marker.vim'
 Plug 'justinmk/vim-sneak'
 let g:sneak#label = 1
 Plug 'haya14busa/vim-edgemotion'
@@ -228,8 +229,8 @@ augroup END
 
 " Experimental
 " Discord presence
-Plug 'https://gitlab.com/betseg/vim-dcrpc', { 'do': 'make' }
-let g:dcrp_autostart = 1
+" Plug 'https://gitlab.com/betseg/vim-dcrpc', { 'do': 'make' }
+" let g:dcrp_autostart = 1
 
 
 call plug#end()
