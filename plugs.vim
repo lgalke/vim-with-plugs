@@ -23,6 +23,10 @@ nnoremap <leader>gf :Gfetch<CR>
 nnoremap <leader>gm :Gmerge<CR>
 nnoremap <leader>gp :Gpush<CR>
 nnoremap <leader>gw :Gwrite<CR>
+" Extension for gitlab
+Plug 'shumphrey/fugitive-gitlab.vim'
+let g:fugitive_gitlab_domains = ['https://git.kd.informatik.uni-kiel.de', 'https://gitlab.com']
+
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-unimpaired'
@@ -222,10 +226,14 @@ augroup vimwiki_autocommands
   au BufRead *diary.wiki VimwikiDiaryGenerateLinks
 augroup END
 
+" Experimental
+" Discord presence
+Plug 'https://gitlab.com/betseg/vim-dcrpc', { 'do': 'make' }
+let g:dcrp_autostart = 1
+
 
 call plug#end()
 
-" Plugin Configuration {{{
 
 
 function! s:power_safe_mode(on)
@@ -239,4 +247,3 @@ function! s:power_safe_mode(on)
 endfunction
 command! -bang PowerSafe call <SID>power_safe_mode(<bang>1) | doautoall BufReadPost,BufEnter
 " silent PowerSafe
-" }}}

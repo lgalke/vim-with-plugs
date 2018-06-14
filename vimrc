@@ -42,6 +42,7 @@ set showtabline=2
 set guioptions-=e
 " Search and Replace
 set incsearch hlsearch
+" Ignore case except for when an upper-case later is present
 set ignorecase smartcase
 
 let g:markdown_fenced_languages = ["sh", "python", "sql", "vim"]
