@@ -79,6 +79,7 @@ augroup vimrc_ex
   au!
   au FileType vim setlocal fdm=marker
   au FileType qf,help nnoremap <buffer> q :q!<CR>
+  au FiletYPE tex nnoremap <buffer> <localleader>op :!okular %:r.pdf&<CR>
   au FileType tex,markdown,txt,rst
         \ setlocal spell
         \ | setlocal nonumber
