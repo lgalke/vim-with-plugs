@@ -26,7 +26,7 @@ set virtualedit+=block
 " Open the folds on jumps
 set foldopen+=jump
 " Initial fold level
-set foldlevel=2
+set foldlevel=0
 " Conceal if possible
 set conceallevel=2
 set nowrap

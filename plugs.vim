@@ -117,8 +117,10 @@ autocmd! User GoyoLeave Limelight! | ALEEnable
 " }}}
 
 " Folding
+" Try coiled snake over simpylfold
+Plug 'kalekundert/vim-coiled-snake'
 Plug 'Konfekt/FastFold'
-Plug 'tmhedberg/SimpylFold'
+" Plug 'tmhedberg/SimpylFold'
 
 " Syntax
 Plug 'leafgarland/typescript-vim'
