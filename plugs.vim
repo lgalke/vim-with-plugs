@@ -116,12 +116,17 @@ autocmd! User GoyoEnter ALEDisable | Limelight
 autocmd! User GoyoLeave Limelight! | ALEEnable
 " }}}
 
-" Folding
+" Folding {{{
 " Try coiled snake over simpylfold
 Plug 'kalekundert/vim-coiled-snake'
 Plug 'Konfekt/FastFold'
 " Plug 'tmhedberg/SimpylFold'
+" }}}
 
+
+" Python {{{
+Plug 'davidhalter/jedi-vim'
+" }}}
 " Syntax
 Plug 'leafgarland/typescript-vim'
 
@@ -208,10 +213,6 @@ Plug 'morhetz/gruvbox'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'junegunn/seoul256.vim'
 Plug 'reedes/vim-colors-pencil'
-
-" Testing
-Plug 'kannokanno/previm'
-let g:previm_open_cmd = 'xdg-open'
 
 " Misc
 Plug 'tweekmonster/startuptime.vim'

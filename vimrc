@@ -60,6 +60,10 @@ nnoremap <leader>f      :find<Space>
 nnoremap <leader>v      :e $MYVIMRC<CR>
 nnoremap <leader>b      :ls<CR>:b<Space>
 
+" Make line Titlecase
+nnoremap <leader>tc :s/\v<(.)(\w*)/\u\1\L\2/g<CR>
+
+" Insert whitespaces after commas, remove all trailing whitespaces
 nnoremap <leader>fw :%s/\m,\zs\ze\S)/<Space>/eg<CR>:%s/\m\s\+$//eg<CR>
 inoremap <C-U> <C-G>u<C-U>
 
@@ -106,7 +110,7 @@ if has("termguicolors")
 endif
 filetype plugin indent on
 syntax enable
-silent! colo seoul256
+silent! colo gruvbox
 " set bg=dark
 
 if filereadable(expand("~/vimrc.local"))
