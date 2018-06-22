@@ -74,20 +74,20 @@ map <C-k> <Plug>(edgemotion-k)
 " }}}
 
 " AutoComplete {{{
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
-augroup lsp_setup
-    " Reset lsp au group and incrementally add per-ft omnifuncs
-  au!
-augroup END
-if executable('pyls')
-  " pip install python-language-server
-  au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd' : {server_info->['pyls']},
-        \ 'whitelist': ['python', 'python.torch'],
-        \ })
-endif
+" Plug 'prabirshrestha/async.vim'
+" Plug 'prabirshrestha/vim-lsp'
+" augroup lsp_setup
+"     " Reset lsp au group and incrementally add per-ft omnifuncs
+"   au!
+" augroup END
+" if executable('pyls')
+"   " pip install python-language-server
+"   au User lsp_setup call lsp#register_server({
+"         \ 'name': 'pyls',
+"         \ 'cmd' : {server_info->['pyls']},
+"         \ 'whitelist': ['python', 'python.torch'],
+"         \ })
+" endif
 " }}}
 
 " Snippets {{{
