@@ -60,8 +60,8 @@ nnoremap <leader>f      :find<Space>
 nnoremap <leader>v      :e $MYVIMRC<CR>
 nnoremap <leader>b      :ls<CR>:b<Space>
 
-" Make line Titlecase
-nnoremap <leader>tc :s/\v<(.)(\w*)/\u\1\L\2/g<CR>
+" Make line Titlecase, uppercase first char of each word
+nnoremap <leader>uc :s/\v<(.)(\w*)/\u\1\L\2/g<CR>
 
 " Insert whitespaces after commas, remove all trailing whitespaces
 nnoremap <leader>fw :%s/\m,\zs\ze\S)/<Space>/eg<CR>:%s/\m\s\+$//eg<CR>
