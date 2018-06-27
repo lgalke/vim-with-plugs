@@ -42,8 +42,12 @@ let g:ragtag_global_maps = 1
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-jdaddy'
 Plug 'tpope/vim-db'
-Plug 'tpope/vim-flagship'
 " }}}
+
+" Statusline
+" Plug 'tpope/vim-flagship'
+Plug 'vim-airline/vim-airline'
+let g:airline#extensions#tabline#enabled = 1
 
 " AndrewRadev
 Plug 'AndrewRadev/sideways.vim'
@@ -213,6 +217,7 @@ Plug 'morhetz/gruvbox'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'junegunn/seoul256.vim'
 Plug 'reedes/vim-colors-pencil'
+Plug 'sjl/badwolf'
 
 " Misc
 Plug 'tweekmonster/startuptime.vim'
