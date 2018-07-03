@@ -66,6 +66,7 @@ Plug 'AndrewRadev/switch.vim'
 
 " File movement {{{
 Plug 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 Plug 'wincent/ferret'
 " Ferret maps <leader>s
 Plug 'ludovicchabant/vim-gutentags'
