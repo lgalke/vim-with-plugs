@@ -91,7 +91,7 @@ augroup vimrc_ex
         \ | setlocal isk+=-
           \ | call litecorrect#init()
   " Lookup import and go to file
-  au FileType python nnoremap <localleader>gd *gD0wgfggn
+  au FileType python nnoremap <localleader>gd :silent! normal! *#gD0wgfggn<CR>
   " Line Return
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
