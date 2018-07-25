@@ -13,7 +13,7 @@ set undofile
 set undodir=/tmp,.
 
 " Disable mouse
-set mouse=
+set mouse=""
 
 " Fancy numbers
 " set number relativenumber
