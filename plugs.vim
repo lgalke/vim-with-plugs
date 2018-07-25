@@ -27,6 +27,8 @@ nnoremap <leader>gw :Gwrite<CR>
 Plug 'shumphrey/fugitive-gitlab.vim'
 let g:fugitive_gitlab_domains = ['https://git.kd.informatik.uni-kiel.de', 'https://gitlab.com']
 
+Plug 'junegunn/gv.vim'
+
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-unimpaired'
