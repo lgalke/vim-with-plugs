@@ -28,7 +28,6 @@ Plug 'shumphrey/fugitive-gitlab.vim'
 let g:fugitive_gitlab_domains = ['https://git.kd.informatik.uni-kiel.de', 'https://gitlab.com']
 
 Plug 'junegunn/gv.vim'
-
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-unimpaired'
@@ -43,18 +42,19 @@ let g:ragtag_global_maps = 1
 
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-jdaddy'
+
 Plug 'tpope/vim-db'
 " }}}
 
-" Statusline
-" Plug 'tpope/vim-flagship'
+" Statusline {{{
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline#extensions#tabline#enabled = 1
 " This absolutely kills opening mildly large (150MB) csv files.
 let g:airline#extensions#whitespace#enabled = 0
+" }}}
 
-" AndrewRadev
+" AndrewRadev {{{
 Plug 'AndrewRadev/sideways.vim'
 nnoremap <a :SidewaysLeft<cr>
 nnoremap >a :SidewaysRight<cr>
@@ -65,6 +65,8 @@ xmap ia <Plug>SidewaysArgumentTextobjI
 Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/switch.vim'
+
+" }}}
 
 " File movement {{{
 Plug 'ctrlpvim/ctrlp.vim'
@@ -81,23 +83,6 @@ let g:sneak#label = 1
 Plug 'haya14busa/vim-edgemotion'
 map <C-j> <Plug>(edgemotion-j)
 map <C-k> <Plug>(edgemotion-k)
-" }}}
-
-" AutoComplete {{{
-" Plug 'prabirshrestha/async.vim'
-" Plug 'prabirshrestha/vim-lsp'
-" augroup lsp_setup
-"     " Reset lsp au group and incrementally add per-ft omnifuncs
-"   au!
-" augroup END
-" if executable('pyls')
-"   " pip install python-language-server
-"   au User lsp_setup call lsp#register_server({
-"         \ 'name': 'pyls',
-"         \ 'cmd' : {server_info->['pyls']},
-"         \ 'whitelist': ['python', 'python.torch'],
-"         \ })
-" endif
 " }}}
 
 " Snippets {{{
