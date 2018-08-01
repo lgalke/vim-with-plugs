@@ -106,8 +106,12 @@ augroup END
 " }}}
 
 " Closing words {{{
-if has("termguicolors")
+if !exists("$TMUX") && has("termguicolors")
+  " If not inside tmux and termguicolors is available
   set termguicolors
+else
+  " Fall-back to 256 colors
+  set t_Co=256
 endif
 filetype plugin indent on
 syntax enable
