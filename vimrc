@@ -45,6 +45,8 @@ set incsearch hlsearch
 " Ignore case except for when an upper-case later is present
 set ignorecase smartcase
 
+set splitright
+
 let g:markdown_fenced_languages = ["sh", "python", "sql", "vim"]
 " }}}
 
