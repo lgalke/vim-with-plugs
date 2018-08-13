@@ -13,6 +13,7 @@ Plug 'tpope/vim-jdaddy'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-characterize'
 nnoremap <leader>m :Make<CR>
 nnoremap <leader>d :Dispatch<CR>
 Plug 'tpope/vim-scriptease'
@@ -151,10 +152,7 @@ nnoremap <leader>ai :ALEInfo<CR>
 " }}}
 
 " Align {{{
-Plug 'junegunn/vim-easy-align'
-vmap <Enter> <Plug>(EasyAlign)
-" Could be <c-g> a to not conflict with vim-characterize
-nmap ga <Plug>(EasyAlign)
+Plug 'godlygeek/Tabular'
 " }}}
 
 
