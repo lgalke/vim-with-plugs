@@ -94,6 +94,7 @@ augroup vimrc_ex
           \ | call litecorrect#init()
   " Lookup import and go to file
   au FileType python nnoremap <localleader>gd :silent! normal! *#gD0wgfggn<CR>
+  au FileType typescript,javascript iabbrev <buffer> print console.log
   " Line Return
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler

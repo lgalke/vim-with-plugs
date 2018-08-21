@@ -50,7 +50,7 @@ Plug 'tpope/vim-db'
 " Statusline {{{
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 " This absolutely kills opening mildly large (150MB) csv files.
 let g:airline#extensions#whitespace#enabled = 0
 " }}}
@@ -70,10 +70,11 @@ Plug 'AndrewRadev/switch.vim'
 " }}}
 
 " File movement {{{
+" CtrlP maps <C-P> (of course)
 Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-Plug 'wincent/ferret'
 " Ferret maps <leader>s
+Plug 'wincent/ferret'
 Plug 'ludovicchabant/vim-gutentags'
 " }}}
 
