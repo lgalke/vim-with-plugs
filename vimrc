@@ -68,8 +68,8 @@ nnoremap <leader>uc :s/\v<(.)(\w*)/\u\1\L\2/g<CR>
 " Insert whitespaces after commas, remove all trailing whitespaces
 nnoremap <leader>fw :%s/\m,\zs\ze\S)/<Space>/eg<CR>:%s/\m\s\+$//eg<CR>
 inoremap <C-U> <C-G>u<C-U>
-
 " }}}
+
 " {{{ Commands
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.

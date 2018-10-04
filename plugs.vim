@@ -37,6 +37,7 @@ Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-ragtag'
+" Maps recommended by ragtag
 inoremap <M-o> <Esc>o
 inoremap <C-j> <Down>
 let g:ragtag_global_maps = 1
@@ -89,6 +90,7 @@ map <C-k> <Plug>(edgemotion-k)
 " }}}
 
 " Snippets {{{
+" To be evaluated TODO
 Plug 'andreyorst/SimpleSnippets.vim'
 Plug 'andreyorst/SimpleSnippets-snippets'
 " Change this to avoid conflict with edgemotion
@@ -115,30 +117,33 @@ autocmd! User GoyoLeave Limelight! | ALEEnable
 " }}}
 
 " Folding {{{
-" Try coiled snake over simpylfold
-Plug 'kalekundert/vim-coiled-snake'
 Plug 'Konfekt/FastFold'
-" Plug 'tmhedberg/SimpylFold'
 " }}}
 
 
 " Python {{{
+" Omnicompletion
 Plug 'davidhalter/jedi-vim'
+" Folding
+" Try coiled snake over simpylfold
+Plug 'kalekundert/vim-coiled-snake'
+" Plug 'tmhedberg/SimpylFold'
+" Indent
+Plug 'Vimjas/vim-python-pep8-indent'
 " }}}
 
 " Compilers
 Plug 'lgalke/vim-compiler-vale'
 
-" Indent
-Plug 'Vimjas/vim-python-pep8-indent'
 
 
-" Pandoc
+" Pandoc {{{
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 let g:pandoc#filetypes#pandoc_markdown = 0
 let g:pandoc#biblio#use_bibtool = 1
 let g:pandoc#completion#bib#mode = "citeproc"
+" }}}
 
 " Linting {{{
 Plug 'w0rp/ale' 
@@ -208,7 +213,7 @@ Plug 'Quramy/tsuquyomi'
 " Signs
 Plug 'mhinz/vim-signify'
 
-" Colors
+" Colors {{{
 Plug 'ap/vim-css-color'
 Plug 'AlessandroYorba/Alduin'
 Plug 'morhetz/gruvbox'
@@ -216,11 +221,12 @@ Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'junegunn/seoul256.vim'
 Plug 'reedes/vim-colors-pencil'
 Plug 'sjl/badwolf'
+" }}}
 
 " Misc
 Plug 'tweekmonster/startuptime.vim'
 
-" Organizing
+" Organizing {{{
 Plug 'freitass/todo.txt-vim'
 Plug 'lgalke/gather-todo.txt-vim'
 
@@ -233,11 +239,7 @@ augroup vimwiki_autocommands
   au BufRead *diary.wiki VimwikiDiaryGenerateLinks
 augroup END
 
-" Experimental
-" Discord presence
-" Plug 'https://gitlab.com/betseg/vim-dcrpc', { 'do': 'make' }
-" let g:dcrp_autostart = 1
-
+" }}}
 
 call plug#end()
 
