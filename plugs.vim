@@ -44,6 +44,7 @@ let g:ragtag_global_maps = 1
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-jdaddy'
 
+" Database connection
 Plug 'tpope/vim-db'
 " }}}
 
@@ -124,8 +125,6 @@ Plug 'Konfekt/FastFold'
 " Python {{{
 Plug 'davidhalter/jedi-vim'
 " }}}
-" Syntax
-Plug 'leafgarland/typescript-vim'
 
 " Compilers
 Plug 'lgalke/vim-compiler-vale'
@@ -196,6 +195,15 @@ augroup plugs_ex
   au FileType tex call s:latexSurround()
 augroup END
 "}}}
+"
+" {{{ Typescript 
+" Syntax
+Plug 'leafgarland/typescript-vim'
+" Omnicompletion
+Plug 'Quramy/tsuquyomi'
+
+
+" }}}
 
 " Signs
 Plug 'mhinz/vim-signify'
@@ -245,4 +253,4 @@ function! s:power_safe_mode(on)
   endif
 endfunction
 command! -bang PowerSafe call <SID>power_safe_mode(<bang>1) | doautoall BufReadPost,BufEnter
-" silent PowerSafe
+silent PowerSafe

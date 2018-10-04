@@ -118,8 +118,9 @@ else
 endif
 filetype plugin indent on
 syntax enable
-silent! colo gruvbox
+" silent! colo gruvbox
 set bg=dark
+silent! colorscheme vividchalk
 
 if filereadable(expand("~/vimrc.local"))
   source ~/vimrc.local
