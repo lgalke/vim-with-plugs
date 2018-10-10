@@ -90,18 +90,19 @@ map <C-k> <Plug>(edgemotion-k)
 " }}}
 
 " Snippets {{{
-" To be evaluated TODO
-Plug 'andreyorst/SimpleSnippets.vim'
-Plug 'andreyorst/SimpleSnippets-snippets'
-" Change this to avoid conflict with edgemotion
-let g:SimpleSnippetsJumpToLastTrigger = "<C-n>"
-nnoremap <LocalLeader>se :SimpleSnippetsEdit<CR>
-nnoremap <LocalLeader>sl :SimpleSnippetsList<CR>
+Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
+" Set map to avoid conflict with YCM
+let g:UltiSnipsExpandTrigger = "<c-l>"
+
+ 
 " }}}
 
-" Text Objects
-" too many false positives
-" Plug 'wellle/targets.vim'
+" Completion {{{
+Plug 'Valloric/YouCompleteMe', {'do': 'python3 install.py'}
+
+" }}}
+
 
 " Helpers
 Plug 'Olical/vim-enmasse'

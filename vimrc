@@ -5,6 +5,8 @@ runtime plugs.vim
 runtime ftplugin/man.vim
 let g:ft_man_folding_enable = 1
 
+set encoding=utf-8
+
 " {{{ Basic Options
 " Dont ask whether to write but just do it
 set autowriteall

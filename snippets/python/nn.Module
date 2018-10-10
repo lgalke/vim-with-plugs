@@ -1,6 +1,0 @@
-class ${1:Net}(nn.Module):
-    def __init__(self, ${2:*args}):
-        ${3:pass}
-
-    def forward(self, ${4:input}):
-        ${5:pass}

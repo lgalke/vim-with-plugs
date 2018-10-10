@@ -1,1 +1,0 @@
-${1:group} = parser.add_argument_group("${2:title}")

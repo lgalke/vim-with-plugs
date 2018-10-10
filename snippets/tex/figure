@@ -1,4 +1,0 @@
-\begin{figure}
-	\includegraphics[width=\textwidth]{${1:PATH/TO/FILE}}
-	\caption{${1:CAPTION}}
-\end{figure}
