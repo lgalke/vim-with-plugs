@@ -206,8 +206,6 @@ augroup END
 Plug 'leafgarland/typescript-vim'
 " Omnicompletion
 Plug 'Quramy/tsuquyomi'
-
-
 " }}}
 
 " Signs
