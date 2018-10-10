@@ -69,8 +69,8 @@ nnoremap <leader>uc :s/\v<(.)(\w*)/\u\1\L\2/g<CR>
 " Insert whitespaces after commas, remove all trailing whitespaces
 nnoremap <leader>fw :%s/\m,\zs\ze\S)/<Space>/eg<CR>:%s/\m\s\+$//eg<CR>
 inoremap <C-U> <C-G>u<C-U>
-
 " }}}
+
 " {{{ Commands
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
@@ -95,6 +95,7 @@ augroup vimrc_ex
           \ | call litecorrect#init()
   " Lookup import and go to file
   au FileType python nnoremap <localleader>gd :silent! normal! *#gD0wgfggn<CR>
+  au FileType typescript,javascript iabbrev <buffer> print console.log
   " Line Return
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
@@ -118,8 +119,9 @@ else
 endif
 filetype plugin indent on
 syntax enable
-silent! colo gruvbox
+" silent! colo gruvbox
 set bg=dark
+silent! colorscheme vividchalk
 
 if filereadable(expand("~/vimrc.local"))
   source ~/vimrc.local
