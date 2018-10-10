@@ -32,7 +32,8 @@ set conceallevel=2
 set nowrap
 set visualbell
 
-set backupdir=~/tmp,.,~/
+set nobackup
+" set backupdir=~/tmp,.,~/
 
 set listchars=eol:$,tab:>-,nbsp:~,trail:-,extends:>,precedes:<
 " latex rubbish
