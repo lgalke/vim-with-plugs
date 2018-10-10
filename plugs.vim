@@ -92,17 +92,9 @@ map <C-k> <Plug>(edgemotion-k)
 " Snippets {{{
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
-" Set map to avoid conflict with YCM
 let g:UltiSnipsExpandTrigger = "<c-l>"
-
- 
+let g:UltiSnipsListSnippets = "<c-k><c-l>"
 " }}}
-
-" Completion {{{
-Plug 'Valloric/YouCompleteMe', {'do': 'python3 install.py'}
-
-" }}}
-
 
 " Helpers
 Plug 'Olical/vim-enmasse'
