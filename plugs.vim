@@ -50,11 +50,11 @@ Plug 'tpope/vim-db'
 " }}}
 
 " Statusline {{{
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-" let g:airline#extensions#tabline#enabled = 1
-" This absolutely kills opening mildly large (150MB) csv files.
-let g:airline#extensions#whitespace#enabled = 0
+Plug 'sunaku/vim-modusline'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+" " This absolutely kills opening mildly large (150MB) csv files.
+" let g:airline#extensions#whitespace#enabled = 0
 " }}}
 
 " AndrewRadev {{{
