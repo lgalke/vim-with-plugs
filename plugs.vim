@@ -73,8 +73,13 @@ Plug 'AndrewRadev/switch.vim'
 
 " File movement {{{
 " CtrlP maps <C-P> (of course)
-Plug 'ctrlpvim/ctrlp.vim'
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+" Plug 'ctrlpvim/ctrlp.vim'
+" let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+
+" Try fzf once again, since junegunns plugins are neat
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 " Ferret maps <leader>s
 Plug 'wincent/ferret'
 Plug 'ludovicchabant/vim-gutentags'
