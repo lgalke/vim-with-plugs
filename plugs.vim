@@ -26,7 +26,7 @@ nnoremap <leader>gp :Gpush<CR>
 nnoremap <leader>gw :Gwrite<CR>
 " Extension for gitlab
 Plug 'shumphrey/fugitive-gitlab.vim'
-let g:fugitive_gitlab_domains = ['https://git.kd.informatik.uni-kiel.de', 'https://gitlab.com']
+let g:fugitive_gitlab_domains = ['https://git.kd.informatik.uni-kiel.de', 'https://git.informatik.uni-kiel.de', 'https://gitlab.com']
 
 Plug 'junegunn/gv.vim'
 Plug 'tpope/vim-rhubarb'
@@ -80,6 +80,7 @@ Plug 'AndrewRadev/switch.vim'
 " Try fzf once again, since junegunns plugins are neat
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+nnoremap <C-P> :FZF<CR>
 " Ferret maps <leader>s
 Plug 'wincent/ferret'
 Plug 'ludovicchabant/vim-gutentags'
