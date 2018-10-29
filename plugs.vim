@@ -98,6 +98,8 @@ map <C-k> <Plug>(edgemotion-k)
 " Snippets {{{
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'jvanja/vim-bootstrap4-snippets'
+
 let g:UltiSnipsExpandTrigger = "<c-l>"
 let g:UltiSnipsListSnippets = "<c-k><c-l>"
 " }}}
