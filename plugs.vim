@@ -104,6 +104,12 @@ let g:UltiSnipsExpandTrigger = "<c-l>"
 let g:UltiSnipsListSnippets = "<c-k><c-l>"
 " }}}
 
+
+" Completion {{{
+Plug 'maralla/completor.vim'
+" Works with ultisnips
+" }}}
+
 " Helpers
 Plug 'Olical/vim-enmasse'
 
@@ -134,9 +140,9 @@ Plug 'kalekundert/vim-coiled-snake'
 Plug 'Vimjas/vim-python-pep8-indent'
 " }}}
 
-" Compilers
+" Compilers {{{
 Plug 'lgalke/vim-compiler-vale'
-
+" }}}
 
 
 " Pandoc {{{
@@ -210,8 +216,6 @@ Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
 " }}}
 
-" Signs
-Plug 'mhinz/vim-signify'
 
 " Colors {{{
 Plug 'ap/vim-css-color'
@@ -223,8 +227,10 @@ Plug 'reedes/vim-colors-pencil'
 Plug 'sjl/badwolf'
 " }}}
 
-" Misc
+" Misc {{{
+Plug 'mhinz/vim-signify'
 Plug 'tweekmonster/startuptime.vim'
+" }}}
 
 " Organizing {{{
 Plug 'freitass/todo.txt-vim'
