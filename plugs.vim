@@ -3,7 +3,7 @@ let s:vimdir = fnamemodify(expand('$MYVIMRC'), ':h:t')
 
 call plug#begin('~/' . s:vimdir . '/plugged')
 
-" tpope {{{
+" tpope 
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -46,18 +46,18 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-jdaddy'
 
 " Database connection
-Plug 'tpope/vim-db'
-" }}}
+Plug 'tpope/vim-dadbod'
+" 
 
-" Statusline {{{
+" Statusline 
 Plug 'sunaku/vim-modusline'
 " Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
 " " This absolutely kills opening mildly large (150MB) csv files.
 " let g:airline#extensions#whitespace#enabled = 0
-" }}}
+" 
 
-" AndrewRadev {{{
+" AndrewRadev 
 Plug 'AndrewRadev/sideways.vim'
 nnoremap <a :SidewaysLeft<cr>
 nnoremap >a :SidewaysRight<cr>
@@ -69,9 +69,9 @@ Plug 'AndrewRadev/dsf.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/switch.vim'
 
-" }}}
+" 
 
-" File movement {{{
+" File movement 
 " CtrlP maps <C-P> (of course)
 " Plug 'ctrlpvim/ctrlp.vim'
 " let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
@@ -84,36 +84,36 @@ nnoremap <C-P> :FZF<CR>
 " Ferret maps <leader>s
 Plug 'wincent/ferret'
 Plug 'ludovicchabant/vim-gutentags'
-" }}}
+" 
 
-" Movement {{{
+" Movement 
 Plug 'rhysd/conflict-marker.vim'
 Plug 'justinmk/vim-sneak'
 let g:sneak#label = 1
 Plug 'haya14busa/vim-edgemotion'
 map <C-j> <Plug>(edgemotion-j)
 map <C-k> <Plug>(edgemotion-k)
-" }}}
+" 
 
-" Snippets {{{
+" Snippets 
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'jvanja/vim-bootstrap4-snippets'
 
 let g:UltiSnipsExpandTrigger = "<c-l>"
 let g:UltiSnipsListSnippets = "<c-k><c-l>"
-" }}}
+" 
 
 
-" Completion {{{
+" Completion 
 Plug 'maralla/completor.vim'
 " Works with ultisnips
-" }}}
+" 
 
 " Helpers
 Plug 'Olical/vim-enmasse'
 
-" Writing {{{
+" Writing 
 Plug 'reedes/vim-wordy'
 Plug 'reedes/vim-litecorrect'
 Plug 'junegunn/goyo.vim'
@@ -121,15 +121,15 @@ Plug 'junegunn/limelight.vim'
 Plug 'lgalke/vim-ernest'
 autocmd! User GoyoEnter ALEDisable | Limelight
 autocmd! User GoyoLeave Limelight! | ALEEnable
-" }}}
+" 
 
-" Folding {{{
+" Folding 
 Plug 'Konfekt/FastFold'
-" }}}
+" 
 
 
 
-" Python {{{
+" Python 
 " Omnicompletion
 Plug 'davidhalter/jedi-vim'
 " Folding
@@ -138,22 +138,22 @@ Plug 'kalekundert/vim-coiled-snake'
 " Plug 'tmhedberg/SimpylFold'
 " Indent
 Plug 'Vimjas/vim-python-pep8-indent'
-" }}}
+" 
 
-" Compilers {{{
+" Compilers 
 Plug 'lgalke/vim-compiler-vale'
-" }}}
+" 
 
 
-" Pandoc {{{
+" Pandoc 
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 let g:pandoc#filetypes#pandoc_markdown = 0
 let g:pandoc#biblio#use_bibtool = 1
 let g:pandoc#completion#bib#mode = "citeproc"
-" }}}
+" 
 
-" Linting {{{
+" Linting 
 Plug 'w0rp/ale' 
 let g:ale_echo_msg_format = '[%linter%/%severity%] %...code...%: %s'
 let g:ale_linters = { 'python' : ['pyls', 'pylint']}
@@ -162,17 +162,17 @@ nnoremap <leader>af :ALEFix<CR>
 nnoremap <leader>an :ALENextWrap<CR>
 nnoremap <leader>ap :ALEPrevWrap<CR>
 nnoremap <leader>ai :ALEInfo<CR>
-" }}}
+" 
 
-" Align {{{
+" Align 
 Plug 'godlygeek/Tabular'
-" }}}
+" 
 
 
 Plug 'haya14busa/vim-auto-programming'
 set completefunc=autoprogramming#complete
 
-" Latex {{{
+" Latex 
 Plug 'lervag/vimtex'
 let g:vimtex_fold_enabled = 1
 let g:vimtex_fold_manual = 1
@@ -207,17 +207,17 @@ augroup plugs_ex
   au!
   au FileType tex call s:latexSurround()
 augroup END
-"}}}
+
 "
-" {{{ Typescript 
+"  Typescript 
 " Syntax
 Plug 'leafgarland/typescript-vim'
 " Omnicompletion
 Plug 'Quramy/tsuquyomi'
-" }}}
+" 
 
 
-" Colors {{{
+" Colors 
 Plug 'ap/vim-css-color'
 Plug 'AlessandroYorba/Alduin'
 Plug 'morhetz/gruvbox'
@@ -225,14 +225,14 @@ Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'junegunn/seoul256.vim'
 Plug 'reedes/vim-colors-pencil'
 Plug 'sjl/badwolf'
-" }}}
+" 
 
-" Misc {{{
+" Misc 
 Plug 'mhinz/vim-signify'
 Plug 'tweekmonster/startuptime.vim'
-" }}}
+" 
 
-" Organizing {{{
+" Organizing 
 Plug 'freitass/todo.txt-vim'
 Plug 'lgalke/gather-todo.txt-vim'
 
@@ -245,7 +245,7 @@ augroup vimwiki_autocommands
   au BufRead *diary.wiki VimwikiDiaryGenerateLinks
 augroup END
 
-" }}}
+" 
 
 call plug#end()
 
