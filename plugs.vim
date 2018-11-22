@@ -225,6 +225,8 @@ Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'junegunn/seoul256.vim'
 Plug 'reedes/vim-colors-pencil'
 Plug 'sjl/badwolf'
+
+Plug 'https://gitlab.com/ducktape/monotone-termnial.git'
 " 
 
 " Misc 
