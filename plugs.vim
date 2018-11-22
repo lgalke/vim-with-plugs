@@ -50,7 +50,7 @@ Plug 'tpope/vim-dadbod'
 " 
 
 " Statusline 
-Plug 'sunaku/vim-modusline'
+" Plug 'sunaku/vim-modusline'
 " Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
 " " This absolutely kills opening mildly large (150MB) csv files.
@@ -105,10 +105,6 @@ let g:UltiSnipsListSnippets = "<c-k><c-l>"
 " 
 
 
-" Completion 
-Plug 'maralla/completor.vim'
-" Works with ultisnips
-" 
 
 " Helpers
 Plug 'Olical/vim-enmasse'
@@ -217,7 +213,7 @@ Plug 'Quramy/tsuquyomi'
 " 
 
 
-" Colors 
+" Colors {{{
 Plug 'ap/vim-css-color'
 Plug 'AlessandroYorba/Alduin'
 Plug 'morhetz/gruvbox'
@@ -226,8 +222,12 @@ Plug 'junegunn/seoul256.vim'
 Plug 'reedes/vim-colors-pencil'
 Plug 'sjl/badwolf'
 
+" Plain monotone
+Plug 'Lokaltog/vim-monotone'
+
+" Green variant only works in GUI
 Plug 'https://gitlab.com/ducktape/monotone-termnial.git'
-" 
+"  }}}
 
 " Misc 
 Plug 'mhinz/vim-signify'
