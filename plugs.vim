@@ -4,44 +4,74 @@ let s:vimdir = fnamemodify(expand('$MYVIMRC'), ':h:t')
 call plug#begin('~/' . s:vimdir . '/plugged')
 
 " tpope 
+" Sensible defaults
 Plug 'tpope/vim-sensible'
+" The surround map
 Plug 'tpope/vim-surround'
+" Repeating more operations via dot (.)
 Plug 'tpope/vim-repeat'
+
+" Operator-pending commenting via gc
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-vividchalk'
+
+" JSON formatting
 Plug 'tpope/vim-jdaddy'
+
+" Project-wide configs, alternate files and so on
 Plug 'tpope/vim-projectionist'
+
+" Provides `SudoWrite` and `SudoEdit`
 Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-dispatch'
+
+" Encoding info for char under cursor
 Plug 'tpope/vim-characterize'
+
+" Make and dispatch builds
+Plug 'tpope/vim-dispatch'
 nnoremap <leader>m :Make<CR>
 nnoremap <leader>d :Dispatch<CR>
+
+" Some scripting utilities such as zS to find highlighting group
 Plug 'tpope/vim-scriptease'
+
+
+" Basic git integration
 Plug 'tpope/vim-fugitive'
-nnoremap <leader>gb :Gbrowse<CR>
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gf :Gfetch<CR>
 nnoremap <leader>gm :Gmerge<CR>
 nnoremap <leader>gp :Gpush<CR>
 nnoremap <leader>gw :Gwrite<CR>
+
+" Provides `GBrowse` for Github
+Plug 'tpope/vim-rhubarb'
+nnoremap <leader>gb :Gbrowse<CR>
 " Extension for gitlab
 Plug 'shumphrey/fugitive-gitlab.vim'
 let g:fugitive_gitlab_domains = ['https://git.kd.informatik.uni-kiel.de', 'https://git.informatik.uni-kiel.de', 'https://gitlab.com']
 
 Plug 'junegunn/gv.vim'
-Plug 'tpope/vim-rhubarb'
+" Guess shiftwidth and other file-specific options
 Plug 'tpope/vim-sleuth'
+" Short-hand to toggle some options such as `con` to `set number!`
 Plug 'tpope/vim-unimpaired'
+" Maps - and provides some improvements over netrw
 Plug 'tpope/vim-vinegar'
+" Read-line interface within command mode
 Plug 'tpope/vim-rsi'
+" Auto-close some blocks
 Plug 'tpope/vim-endwise'
+" Adjust dates with <C-A> and <C-X>
 Plug 'tpope/vim-speeddating'
+
+" Auto closing tags via <C-X>/
 Plug 'tpope/vim-ragtag'
 " Maps recommended by ragtag
 inoremap <M-o> <Esc>o
 inoremap <C-j> <Down>
 let g:ragtag_global_maps = 1
 
+" Provides `Subvert` and `Abolish`
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-jdaddy'
 
@@ -104,12 +134,16 @@ let g:UltiSnipsListSnippets = "<c-k><c-l>"
 
 " Writing
 Plug 'reedes/vim-wordy'
-Plug 'reedes/vim-litecorrect'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
+" Use Abolish instead
+" Plug 'reedes/vim-litecorrect'
+" Plug 'junegunn/goyo.vim'
+" Plug 'junegunn/limelight.vim'
 Plug 'lgalke/vim-ernest'
-autocmd! User GoyoEnter ALEDisable | Limelight
-autocmd! User GoyoLeave Limelight! | ALEEnable
+
+" Raises errors in some colorscheme
+" autocmd! User GoyoEnter ALEDisable | Limelight
+" autocmd! User GoyoLeave Limelight! | ALEEnable
+
 " 
 
 " Folding 
@@ -133,10 +167,6 @@ Plug 'kalekundert/vim-coiled-snake'
 " Indent
 Plug 'Vimjas/vim-python-pep8-indent'
 " }}}
-
-" Compilers 
-Plug 'lgalke/vim-compiler-vale'
-" 
 
 
 " Pandoc 
@@ -171,11 +201,6 @@ Plug 'lervag/vimtex'
 let g:vimtex_fold_enabled = 1
 let g:vimtex_fold_manual = 1
 let g:vimtex_format_enabled = 0
-" Should move to local
-" let g:vimtex_view_general_viewer = 'SumatraPDF'
-" " add cygwin path prefix /cygwin64/
-" let g:vimtex_view_general_options
-"     \ = '-reuse-instance -forward-search @tex @line /cygwin64/@pdf'
 let g:vimtex_compiler_latexmk = {
   \ 'backend' : 'jobs',
     \ 'background' : 1,
@@ -191,7 +216,7 @@ let g:vimtex_compiler_latexmk = {
     \   '-interaction=nonstopmode',
     \ ],
     \}
-"
+" Surround map recommended by vimtex
 function! s:latexSurround()
    let b:surround_{char2nr("e")}
      \ = "\\begin{\1environment: \1}\n\t\r\n\\end{\1\1}"
@@ -213,13 +238,15 @@ Plug 'Quramy/tsuquyomi'
 
 
 " Colors {{{
-Plug 'ap/vim-css-color'
-Plug 'AlessandroYorba/Alduin'
+Plug 'tpope/vim-vividchalk'
+Plug 'sjl/badwolf'
 Plug 'morhetz/gruvbox'
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'AlessandroYorba/Alduin'
 Plug 'junegunn/seoul256.vim'
 Plug 'reedes/vim-colors-pencil'
-Plug 'sjl/badwolf'
+
+" Highlight css colors always
+Plug 'ap/vim-css-color'
 
 " Plain monotone
 Plug 'Lokaltog/vim-monotone'
