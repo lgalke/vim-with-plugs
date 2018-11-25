@@ -114,20 +114,25 @@ autocmd! User GoyoLeave Limelight! | ALEEnable
 
 " Folding 
 Plug 'Konfekt/FastFold'
-" 
+"
 
-
-
-" Python 
+" Python {{{
 " Omnicompletion
 Plug 'davidhalter/jedi-vim'
+" No auto-start on dot input
+let g:jedi#completions_enabled = 0
+" Leave preview window open
+let g:jedi#auto_close_doc = 0
+" Do not auto-insert import stuff
+let g:jedi#smart_auto_mappings = 0
+
 " Folding
 " Try coiled snake over simpylfold
 Plug 'kalekundert/vim-coiled-snake'
 " Plug 'tmhedberg/SimpylFold'
 " Indent
 Plug 'Vimjas/vim-python-pep8-indent'
-" 
+" }}}
 
 " Compilers 
 Plug 'lgalke/vim-compiler-vale'
@@ -145,8 +150,8 @@ let g:pandoc#completion#bib#mode = "citeproc"
 " Linting 
 Plug 'w0rp/ale' 
 let g:ale_echo_msg_format = '[%linter%/%severity%] %...code...%: %s'
-let g:ale_linters = { 'python' : ['pyls', 'pylint']}
-let g:ale_fixers = { 'markdown' : [ 'remove_trailing_lines', 'trim_whitespace' ] }
+let g:ale_linters = { 'python': ['pyls', 'pylint'], 'text': ['writegood', 'proselint']}
+let g:ale_fixers = { 'markdown': [ 'remove_trailing_lines', 'trim_whitespace' ] }
 nnoremap <leader>af :ALEFix<CR>
 nnoremap <leader>an :ALENextWrap<CR>
 nnoremap <leader>ap :ALEPrevWrap<CR>
