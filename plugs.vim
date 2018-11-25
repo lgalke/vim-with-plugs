@@ -54,6 +54,7 @@ Plug 'tpope/vim-dadbod'
 " Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
 " " This absolutely kills opening mildly large (150MB) csv files.
+" " Fix:
 " let g:airline#extensions#whitespace#enabled = 0
 " 
 
@@ -83,17 +84,14 @@ Plug 'junegunn/fzf.vim'
 nnoremap <C-P> :FZF<CR>
 " Ferret maps <leader>s
 Plug 'wincent/ferret'
-Plug 'ludovicchabant/vim-gutentags'
+" Editing within quickfix
+Plug 'Olical/vim-enmasse'
+
 " 
 
 " Movement 
-Plug 'rhysd/conflict-marker.vim'
 Plug 'justinmk/vim-sneak'
 let g:sneak#label = 1
-Plug 'haya14busa/vim-edgemotion'
-map <C-j> <Plug>(edgemotion-j)
-map <C-k> <Plug>(edgemotion-k)
-" 
 
 " Snippets 
 Plug 'sirver/ultisnips'
@@ -102,14 +100,9 @@ Plug 'jvanja/vim-bootstrap4-snippets'
 
 let g:UltiSnipsExpandTrigger = "<c-l>"
 let g:UltiSnipsListSnippets = "<c-k><c-l>"
-" 
+"
 
-
-
-" Helpers
-Plug 'Olical/vim-enmasse'
-
-" Writing 
+" Writing
 Plug 'reedes/vim-wordy'
 Plug 'reedes/vim-litecorrect'
 Plug 'junegunn/goyo.vim'
@@ -164,7 +157,7 @@ nnoremap <leader>ai :ALEInfo<CR>
 Plug 'godlygeek/Tabular'
 " 
 
-
+" TODO remove?
 Plug 'haya14busa/vim-auto-programming'
 set completefunc=autoprogramming#complete
 
@@ -206,6 +199,7 @@ augroup END
 
 "
 "  Typescript 
+
 " Syntax
 Plug 'leafgarland/typescript-vim'
 " Omnicompletion
@@ -224,9 +218,6 @@ Plug 'sjl/badwolf'
 
 " Plain monotone
 Plug 'Lokaltog/vim-monotone'
-
-" Green variant only works in GUI
-Plug 'https://gitlab.com/ducktape/monotone-termnial.git'
 "  }}}
 
 " Misc 
@@ -234,7 +225,7 @@ Plug 'mhinz/vim-signify'
 Plug 'tweekmonster/startuptime.vim'
 " 
 
-" Organizing 
+" Organizing {{{
 Plug 'freitass/todo.txt-vim'
 Plug 'lgalke/gather-todo.txt-vim'
 
@@ -247,7 +238,7 @@ augroup vimwiki_autocommands
   au BufRead *diary.wiki VimwikiDiaryGenerateLinks
 augroup END
 
-" 
+" }}}
 
 call plug#end()
 
