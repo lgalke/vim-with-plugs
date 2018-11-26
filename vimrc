@@ -94,7 +94,6 @@ augroup vimrc_ex
         \ | setlocal nonumber
         \ | setlocal norelativenumber
         \ | setlocal isk+=-
-          \ | call litecorrect#init()
   " Lookup import and go to file
   au FileType python nnoremap <localleader>gd :silent! normal! *#gD0wgfggn<CR>
   au FileType typescript,javascript iabbrev <buffer> print console.log
