@@ -250,6 +250,7 @@ Plug 'ap/vim-css-color'
 
 " Plain monotone
 Plug 'Lokaltog/vim-monotone'
+Plug 'fxn/vim-monochrome'
 "  }}}
 
 " Misc 
