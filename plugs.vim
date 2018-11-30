@@ -237,7 +237,7 @@ Plug 'Quramy/tsuquyomi'
 " 
 
 
-" Colors {{{
+" Colorschemes {{{
 Plug 'tpope/vim-vividchalk'
 Plug 'sjl/badwolf'
 Plug 'morhetz/gruvbox'
@@ -251,6 +251,7 @@ Plug 'ap/vim-css-color'
 " Plain monotone
 Plug 'Lokaltog/vim-monotone'
 Plug 'fxn/vim-monochrome'
+Plug 'robertmeta/nofrils'
 "  }}}
 
 " Misc 
