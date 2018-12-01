@@ -248,9 +248,7 @@ Plug 'reedes/vim-colors-pencil'
 " Highlight css colors always
 Plug 'ap/vim-css-color'
 
-" Plain monotone
-Plug 'Lokaltog/vim-monotone'
-Plug 'fxn/vim-monochrome'
+" Minimalist colorschemes
 Plug 'robertmeta/nofrils'
 "  }}}
 
