@@ -254,6 +254,7 @@ Plug 'robertmeta/nofrils'
 
 " Misc 
 Plug 'mhinz/vim-signify'
+Plug 'mhinz/vim-startify'
 Plug 'tweekmonster/startuptime.vim'
 " 
 
